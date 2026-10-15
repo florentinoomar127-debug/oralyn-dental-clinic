@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oralyn — The Future of Dental Care, Today</title>
+  <title>Oralyn — Specialized Orthodontics & Smile Alignment</title>
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,6 @@
             'glow': '0 10px 25px -3px rgba(25, 103, 210, 0.45)',
             'soft': '0 12px 30px -4px rgba(0, 0, 0, 0.04)',
             'card': '0 2px 10px rgba(0, 0, 0, 0.03)',
-            'dock': '0 12px 40px rgba(0, 0, 0, 0.12)',
           }
         }
       }
@@ -70,19 +69,22 @@
 </head>
 <body class="selection:bg-blue-100 selection:text-blue-700">
 
-  <!-- ==================== TOP BAR (SMART HIDE ON SCROLL DOWN / SHOW ON SCROLL UP) ==================== -->
+  <!-- ==================== TOP BAR (SMART SCROLL) ==================== -->
   <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full glass border-b border-neutral-100 transition-transform duration-300 ease-in-out">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
-      <a href="#" class="text-2xl sm:text-[26px] font-bold tracking-tight text-neutral-900">
-        Oralyn
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-2xl sm:text-[26px] font-extrabold tracking-tight text-neutral-900">Oralyn</span>
+        <span class="text-[10px] font-bold tracking-widest uppercase bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full border border-blue-200">
+          Orthodontics
+        </span>
       </a>
 
-      <!-- Navigation links matching exact image -->
+      <!-- Navigation links -->
       <nav class="hidden md:flex items-center space-x-10 text-[13px] font-semibold tracking-wider text-neutral-600">
         <a href="#hero" class="hover:text-black transition-colors">HOME</a>
-        <a href="#treatments" class="hover:text-black transition-colors">TREATMENTS</a>
-        <a href="#treatments" class="hover:text-black transition-colors">ABOUT</a>
-        <a href="#results" class="hover:text-black transition-colors">BLOG</a>
+        <a href="#ortho-treatments" class="hover:text-black transition-colors">ALIGNERS & BRACES</a>
+        <a href="#results" class="hover:text-black transition-colors">BEFORE & AFTER</a>
+        <a href="#faq" class="hover:text-black transition-colors">FAQ</a>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -90,13 +92,13 @@
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
             <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
           </svg>
-          <span>CONTACT US</span>
+          <span>BOOK CONSULTATION</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
+  <!-- ==================== HERO SECTION (100% ORTHODONTICS) ==================== -->
   <main id="hero" class="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-16 lg:pb-24">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
       
@@ -112,15 +114,15 @@
               <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSXLNycPp0bX5RlDfwDEGWLn6mxjYbpT9R3YCs0hyynezIQWwJwBhnfP5l0zhD8x9XV5aPbuzJydF6TSTEiDoeXMDNBF_-Lv8BgZGWdxAD7NsReyjpneWPRAaJqfNDI-piKJo4ffo7WdoJfoK0r1Sn23UWE0ymOK4jaqB865mb6HQQeTKQF5t4YxO0j2E8gU_sreK_oEMxvXH2sciTL3rE214y4kNbibjo3ouH5wkjNVCzOKKAiyz">
             </div>
             <div class="leading-tight">
-              <span class="block text-sm font-bold text-neutral-900 leading-none">16k+</span>
-              <span class="text-[11px] font-medium text-neutral-500">Satisfied Patients</span>
+              <span class="block text-sm font-bold text-neutral-900 leading-none">5,000+</span>
+              <span class="text-[11px] font-medium text-neutral-500">Sonrisas Alineadas</span>
             </div>
           </div>
 
-          <!-- Main Headline -->
+          <!-- Main Orthodontic Headline -->
           <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] pt-2">
             The Future of<br>
-            Dental Care,<br>
+            Orthodontics,<br>
             <span class="inline-flex items-center gap-3 sm:gap-4">
               <span class="inline-flex items-center text-neutral-400">
                 <svg class="w-16 sm:w-28 h-7 text-neutral-400 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 120 24">
@@ -132,120 +134,121 @@
             </span>
           </h1>
 
-          <!-- CTA & Description -->
+          <!-- CTA & Description focused on Alignment -->
           <div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
             <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
-              <span>SCHEDULE CONSULTATION</span>
+              <span>SCHEDULE 3D SCAN</span>
               <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </button>
             <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-500 max-w-[240px]">
-              Crafting a confident smile that lights up every room and leaves a lasting impression.
+              Alineamos tu sonrisa con tecnología 3D y ortodoncia invisible de alta precisión.
             </p>
           </div>
         </div>
 
-        <!-- 2 Clean Feature Cards -->
+        <!-- 2 Orthodontic Feature Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 sm:pt-14">
           <div class="card-gradient rounded-3xl p-6 border border-white/80 shadow-soft flex flex-col justify-between h-[170px]">
             <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-              <svg class="w-4 h-4 text-neutral-700 fill-current" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
                 <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
               </svg>
             </div>
             <div>
-              <h3 class="font-bold text-neutral-900 text-sm mb-1">Digital Smile Design</h3>
+              <h3 class="font-bold text-neutral-900 text-sm mb-1">Simulación Biomecánica 3D</h3>
               <p class="text-[11px] leading-normal text-neutral-500">
-                See a preview of your new smile before you begin.
+                Visualiza el movimiento exacto de tus dientes semana a semana antes de iniciar.
               </p>
             </div>
           </div>
 
           <div class="card-gradient rounded-3xl p-6 border border-white/80 shadow-soft flex flex-col justify-between h-[170px]">
             <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-              <svg class="w-4 h-4 text-neutral-700 fill-current" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
                 <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
               </svg>
             </div>
             <div>
-              <h3 class="font-bold text-neutral-900 text-sm mb-1">AI Diagnostics</h3>
+              <h3 class="font-bold text-neutral-900 text-sm mb-1">Alineación Acelerada</h3>
               <p class="text-[11px] leading-normal text-neutral-500">
-                Precise, painless detection for faster results.
+                Tratamientos de ortodoncia hasta 50% más rápidos, sin alambres molestos ni dolor.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Right Column: Photography -->
+      <!-- Right Column: Clean Smiling Patient Hero Photo (Without obstructive video card) -->
       <section class="lg:col-span-6 relative flex flex-col items-stretch">
         <div class="relative w-full h-[500px] sm:h-[560px] lg:h-full min-h-[480px] rounded-[36px] overflow-hidden bg-[#bfe1fb] concentric-arcs flex items-end justify-center shadow-sm">
           <div class="absolute inset-0 pointer-events-none concentric-arcs opacity-60"></div>
           
-          <img alt="Smiling patient" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi">
-          
-
+          <img alt="Paciente con sonrisa perfectamente alineada" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi">
         </div>
       </section>
 
     </div>
   </main>
 
-  <!-- ==================== TREATMENTS (CLEAN & MINIMAL) ==================== -->
-  <section id="treatments" class="py-16 sm:py-24 border-t border-neutral-100">
+  <!-- ==================== ORTHODONTIC TREATMENTS (100% ESPECIALIZADOS) ==================== -->
+  <section id="ortho-treatments" class="py-16 sm:py-24 border-t border-neutral-100">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
       
       <div class="text-center max-w-xl mx-auto mb-14">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
-          Specialized Care
+        <span class="text-xs font-bold font-mono tracking-widest uppercase text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          ORTODONCIA ESPECIALIZADA
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight mt-3">
+          Sistemas de Alineación Avanzada
         </h2>
         <p class="text-neutral-500 text-xs sm:text-sm mt-2">
-          Tecnología de precisión, sin dolor y diseñada a tu medida.
+          Soluciones personalizadas para corregir apiñamiento, mordida y espacios interdentales.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <!-- Service 1 -->
+        <!-- Ortho 1: Clear Aligners -->
         <div class="bg-neutral-50/60 hover:bg-white rounded-3xl p-7 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
-            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">INVISALIGN</span>
-            <h3 class="text-lg font-bold text-neutral-900 mt-4">Alineadores Invisibles</h3>
+            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">INVISALIGN / ALINEADORES</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-4">Ortodoncia Invisible</h3>
             <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
-              Dientes alineados sin brackets metálicos ni molestias. Retirables al comer y 100% discretos.
+              Placas transparentes termoformadas que corrigen la posición de tus dientes de forma 100% estética, removibles al comer y cepillarte.
             </p>
           </div>
-          <button onclick="openBookingModal('Alineadores Invisibles')" class="mt-8 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
-            <span>Cotizar tratamiento →</span>
+          <button onclick="openBookingModal('Ortodoncia Invisible')" class="mt-8 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+            <span>Cotizar mi caso →</span>
           </button>
         </div>
 
-        <!-- Service 2 -->
+        <!-- Ortho 2: Sapphire & Ceramic Aesthetic Braces -->
         <div class="bg-neutral-50/60 hover:bg-white rounded-3xl p-7 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
-            <span class="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">SIMULACIÓN 3D</span>
-            <h3 class="text-lg font-bold text-neutral-900 mt-4">Digital Smile Design</h3>
+            <span class="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">BRACKETS ESTÉTICOS</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-4">Brackets de Zafiro y Cerámica</h3>
             <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
-              Visualiza el resultado de tu sonrisa en pantalla antes de comenzar cualquier procedimiento.
+              Mimetizan el color natural de tu esmalte dental. Máxima resistencia biomecánica para casos complejos con un acabado sumamente discreto.
             </p>
           </div>
-          <button onclick="openBookingModal('Digital Smile Design')" class="mt-8 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
-            <span>Ver simulación →</span>
+          <button onclick="openBookingModal('Brackets de Zafiro')" class="mt-8 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+            <span>Ver opciones estéticas →</span>
           </button>
         </div>
 
-        <!-- Service 3 -->
+        <!-- Ortho 3: Damon System Self-Ligating -->
         <div class="bg-neutral-50/60 hover:bg-white rounded-3xl p-7 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
-            <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">45 MIN</span>
-            <h3 class="text-lg font-bold text-neutral-900 mt-4">Blanqueamiento Láser</h3>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">AUTOLIGADO DAMON</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-4">Brackets Autoligados de Alta Frecuencia</h3>
             <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
-              Hasta 8 tonos más blanco en una sola cita con fórmula fría libre de sensibilidad.
+              Tecnología de baja fricción sin gomitas elásticas. Movimientos biológicos más rápidos, menos citas presenciales y sin extracciones innecesarias.
             </p>
           </div>
-          <button onclick="openBookingModal('Blanqueamiento Láser')" class="mt-8 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
-            <span>Agendar sesión →</span>
+          <button onclick="openBookingModal('Brackets Autoligados')" class="mt-8 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+            <span>Consultar tiempo estimado →</span>
           </button>
         </div>
 
@@ -253,23 +256,25 @@
     </div>
   </section>
 
-  <!-- ==================== BEFORE & AFTER SLIDER ==================== -->
+  <!-- ==================== BEFORE & AFTER SLIDER (CASO REAL DE ALINEACIÓN) ==================== -->
   <section id="results" class="py-16 sm:py-20 bg-neutral-900 text-white">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
       
       <div class="text-center max-w-xl mx-auto mb-10">
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Real Results</h2>
-        <p class="text-neutral-400 text-xs sm:text-sm mt-2">Desliza para ver la transformación real de 7 meses.</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Transformación de Ortodoncia</h2>
+        <p class="text-neutral-400 text-xs sm:text-sm mt-2">
+          Desliza para ver la corrección de apiñamiento y simetría dental lograda en 7 meses.
+        </p>
       </div>
 
       <div class="max-w-3xl mx-auto">
         <div class="slider-box relative rounded-3xl overflow-hidden aspect-[16/9] shadow-2xl border border-white/10" id="comparisonSlider">
           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute bottom-4 right-4 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full pointer-events-none">DESPUÉS</div>
+          <div class="absolute bottom-4 right-4 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full pointer-events-none">RESULTADO FINAL (7 Meses)</div>
 
           <div id="beforeWrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white pointer-events-none">
             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi" class="absolute inset-0 w-full h-full object-cover grayscale contrast-125" style="width: 200%; max-width: 200%;">
-            <div class="absolute bottom-4 left-4 bg-black/80 text-white text-[11px] font-bold px-3 py-1 rounded-full">ANTES</div>
+            <div class="absolute bottom-4 left-4 bg-black/80 text-white text-[11px] font-bold px-3 py-1 rounded-full">ESTADO INICIAL (Apiñamiento)</div>
           </div>
 
           <div id="sliderHandle" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-8 flex items-center justify-center cursor-ew-resize">
@@ -278,77 +283,77 @@
         </div>
 
         <div class="mt-6 flex justify-center gap-8 text-center text-xs text-neutral-400">
-          <div><span class="text-white font-bold">7 Meses</span> • Duración</div>
-          <div><span class="text-white font-bold">22 Placas</span> • Invisibles</div>
-          <div><span class="text-white font-bold">100%</span> • Satisfacción</div>
+          <div><span class="text-white font-bold">7 Meses</span> • Duración Media</div>
+          <div><span class="text-white font-bold">Alineadores 3D</span> • Sin dolor</div>
+          <div><span class="text-white font-bold">Retenedor Fijo</span> • De por vida</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== 3-STEP PROCESS ==================== -->
+  <!-- ==================== 3-STEP ORTHODONTIC JOURNEY ==================== -->
   <section class="py-16 sm:py-20 border-b border-neutral-100">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="space-y-2">
           <div class="text-2xl font-extrabold text-blue-600">01</div>
-          <h3 class="text-base font-bold text-neutral-900">Escaneo Óptico 3D</h3>
-          <p class="text-xs text-neutral-500 leading-relaxed">Cero pastas molestas. En 15 minutos capturamos un modelo digital exacto.</p>
+          <h3 class="text-base font-bold text-neutral-900">Escaneo Cefalométrico 3D</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Capturamos la posición ósea y dental con escáner óptico iTero en 15 minutos, sin moldes con pasta.</p>
         </div>
 
         <div class="space-y-2">
           <div class="text-2xl font-extrabold text-blue-600">02</div>
-          <h3 class="text-base font-bold text-neutral-900">Diseño Virtual</h3>
-          <p class="text-xs text-neutral-500 leading-relaxed">Ves el movimiento planificado de cada diente antes de iniciar.</p>
+          <h3 class="text-base font-bold text-neutral-900">Plan Digital de Movimiento</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">El ortodoncista especialista diseña y simula en computadora la alineación milimétrica de tu mordida.</p>
         </div>
 
         <div class="space-y-2">
           <div class="text-2xl font-extrabold text-blue-600">03</div>
-          <h3 class="text-base font-bold text-neutral-900">Alineación Cómoda</h3>
-          <p class="text-xs text-neutral-500 leading-relaxed">Alineadores transparentes directos a ti con revisiones digitales.</p>
+          <h3 class="text-base font-bold text-neutral-900">Alineadores o Brackets Estéticos</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Inicias tu tratamiento con revisiones periódicas y seguimiento fotográfico digital continuo.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== FAQ ==================== -->
+  <!-- ==================== FAQ DE ORTODONCIA ==================== -->
   <section id="faq" class="py-16 sm:py-20 bg-neutral-50/50">
     <div class="max-w-2xl mx-auto px-6">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight text-center mb-8">
-        Frequently Asked
+        Preguntas Frecuentes de Ortodoncia
       </h2>
 
       <div class="space-y-3" id="faqAccordion">
         <div class="bg-white rounded-2xl border border-neutral-200/70 p-4 shadow-sm">
           <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-xs sm:text-sm text-neutral-900">
-            <span>¿Cuánto dura el tratamiento con alineadores?</span>
+            <span>¿Soy candidato para alineadores invisibles o necesito brackets?</span>
             <span class="text-neutral-400 font-normal text-base">+</span>
           </button>
           <div class="hidden pt-2.5 text-xs text-neutral-500 leading-relaxed border-t border-neutral-100 mt-2.5">
-            Entre 4 y 9 meses en la mayoría de casos. Con el escáner 3D inicial sabrás el tiempo exacto antes de empezar.
+            Hoy en día, más del 90% de los casos de apiñamiento y mordida pueden corregirse con alineadores invisibles. En la consulta con el escáner 3D determinamos con certeza cuál sistema te dará el mejor resultado estético y funcional.
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-neutral-200/70 p-4 shadow-sm">
           <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-xs sm:text-sm text-neutral-900">
-            <span>¿Provoca dolor o llagas?</span>
+            <span>¿Cuánto tiempo dura un tratamiento de ortodoncia?</span>
             <span class="text-neutral-400 font-normal text-base">+</span>
           </button>
           <div class="hidden pt-2.5 text-xs text-neutral-500 leading-relaxed border-t border-neutral-100 mt-2.5">
-            No. Son suaves, pulidos con láser y no tienen alambres metálicos que pinchen ni corten.
+            Con ortodoncia invisible y brackets autoligados el promedio va de 6 a 12 meses en casos moderados. Desde la primera sesión sabrás el número exacto de placas o meses requeridos.
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-neutral-200/70 p-4 shadow-sm">
           <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-xs sm:text-sm text-neutral-900">
-            <span>¿Ofrecen financiamiento en cuotas?</span>
+            <span>¿Por qué son indispensables los retenedores al finalizar?</span>
             <span class="text-neutral-400 font-normal text-base">+</span>
           </button>
           <div class="hidden pt-2.5 text-xs text-neutral-500 leading-relaxed border-t border-neutral-100 mt-2.5">
-            Sí, planes mensuales sin intereses y cobertura con los principales seguros.
+            Los dientes tienen memoria biológica. Los retenedores (transparentes nocturnos o fijos linguales) garantizan que tu sonrisa permanezca perfectamente alineada para toda la vida.
           </div>
         </div>
       </div>
@@ -358,40 +363,40 @@
   <!-- ==================== CALL TO ACTION ==================== -->
   <section class="py-16 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
     <div class="bg-neutral-900 text-white rounded-[32px] p-8 sm:p-12">
-      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">Ready for your new smile?</h2>
+      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">¿Listo para alinear tu sonrisa?</h2>
       <p class="text-neutral-400 text-xs sm:text-sm mt-2 max-w-md mx-auto">
-        Agenda tu consulta de evaluación y escaneo 3D sin compromiso.
+        Agenda tu escaneo digital 3D y evaluación con nuestro especialista en ortodoncia.
       </p>
       <div class="mt-6 flex flex-wrap justify-center gap-3">
         <button onclick="openBookingModal()" class="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-xs px-6 py-3.5 rounded-full shadow-glow transition-all">
-          SCHEDULE CONSULTATION
+          AGENDAR ESCANEO 3D
         </button>
       </div>
     </div>
   </section>
 
-  <!-- ==================== DOWN BAR (PIE DE PÁGINA / BOTTOM BAR) ==================== -->
+  <!-- ==================== DOWN BAR (A LO ÚLTIMO DE LA WEB) ==================== -->
   <footer class="border-t border-neutral-200/70 bg-white py-10 mt-12">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-6">
       
       <!-- Brand & Copyright -->
       <div class="flex items-center gap-4">
-        <a href="#" class="text-xl font-bold tracking-tight text-neutral-900">Oralyn</a>
+        <a href="#" class="text-xl font-bold tracking-tight text-neutral-900">Oralyn Orthodontics</a>
         <span class="text-neutral-300">|</span>
-        <span class="text-xs text-neutral-400">© 2026 Oralyn Dental Studios. All rights reserved.</span>
+        <span class="text-xs text-neutral-400">© 2026 Oralyn Specialized Orthodontics. All rights reserved.</span>
       </div>
 
-      <!-- Links matching top bar -->
+      <!-- Links -->
       <nav class="flex flex-wrap items-center justify-center gap-8 text-[12px] font-semibold tracking-wider text-neutral-600">
         <a href="#hero" class="hover:text-black transition-colors">HOME</a>
-        <a href="#treatments" class="hover:text-black transition-colors">TREATMENTS</a>
-        <a href="#treatments" class="hover:text-black transition-colors">ABOUT</a>
-        <a href="#results" class="hover:text-black transition-colors">BLOG</a>
+        <a href="#ortho-treatments" class="hover:text-black transition-colors">TREATMENTS</a>
+        <a href="#results" class="hover:text-black transition-colors">BEFORE & AFTER</a>
+        <a href="#faq" class="hover:text-black transition-colors">FAQ</a>
       </nav>
 
       <!-- Action -->
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/18095550199?text=Hola%20Oralyn!" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 transition-colors">
+        <a href="https://wa.me/18095550199?text=Hola%20Oralyn!%20Quiero%20información%20sobre%20ortodoncia." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 transition-colors">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>WhatsApp</span>
         </a>
@@ -403,13 +408,17 @@
     </div>
   </footer>
 
-  <!-- ==================== MODAL: BOOKING ==================== -->
+  <!-- ==================== MODAL: BOOKING ORTHODONTICS ==================== -->
   <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
     <div class="bg-white rounded-3xl w-full max-w-md p-6 sm:p-8 relative shadow-2xl">
       <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 p-2">✕</button>
 
-      <h3 class="text-xl font-bold text-neutral-900">Agendar Consulta 3D</h3>
-      <p class="text-xs text-neutral-500 mt-1">Confirmamos tu cita al instante vía WhatsApp.</p>
+      <div class="flex items-center gap-2 mb-1">
+        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+        <span class="text-[10px] font-bold tracking-widest text-blue-600 uppercase">Consulta de Ortodoncia</span>
+      </div>
+      <h3 class="text-xl font-bold text-neutral-900">Agendar Escaneo 3D</h3>
+      <p class="text-xs text-neutral-500 mt-1">Confirmamos tu turno de ortodoncia de inmediato por WhatsApp.</p>
 
       <form onsubmit="handleBookingSubmit(event)" class="mt-5 space-y-3">
         <div>
@@ -423,12 +432,13 @@
         </div>
 
         <div>
-          <label class="block text-[11px] font-bold text-neutral-600 uppercase mb-1">Tratamiento</label>
+          <label class="block text-[11px] font-bold text-neutral-600 uppercase mb-1">Tratamiento de Ortodoncia</label>
           <select id="patientService" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-blue-600 focus:border-blue-600">
-            <option>Alineadores Invisibles</option>
-            <option>Digital Smile Design (3D)</option>
-            <option>Blanqueamiento Láser</option>
-            <option>Evaluación General</option>
+            <option>Ortodoncia Invisible (Alineadores)</option>
+            <option>Brackets de Zafiro / Cerámica</option>
+            <option>Brackets Autoligados (Damon System)</option>
+            <option>Ortodoncia Infantil / Interceptiva</option>
+            <option>Retenedores Post-Tratamiento</option>
           </select>
         </div>
 
@@ -482,7 +492,7 @@
       const service = document.getElementById('patientService').value;
 
       const clinicPhone = '18095550199';
-      const msg = `🦷 *CITA ORALYN*\n\nPaciente: ${name}\nTeléfono: ${phone}\nTratamiento: ${service}`;
+      const msg = `🦷 *SOLICITUD DE ORTODONCIA - ORALYN*\n\nPaciente: ${name}\nTeléfono: ${phone}\nTratamiento: ${service}\n\n_Deseo agendar mi escaneo 3D_`;
       window.open(`https://wa.me/${clinicPhone}?text=${encodeURIComponent(msg)}`, '_blank');
       closeBookingModal();
     }
