@@ -185,22 +185,7 @@
           
           <img alt="Smiling patient" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi">
           
-          <!-- Floating Video Card -->
-          <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 w-64 sm:w-72 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 shadow-xl border border-white/60">
-            <div class="relative w-full h-32 sm:h-36 rounded-xl overflow-hidden bg-neutral-100 group cursor-pointer" onclick="openVideoModal()">
-              <img alt="Clinic room" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL2PKoUH0PvYAbyigi3LXjkprmmpaTZQ6N5s4YJQzADzFp0Az9Lcmguz2jaq-VDnIF-w5HWiPhkTUiIAlm2Thg4hcO6wY_IID2oKI_oEZ_ERLZVYXaoWCvao2sWq4DH8ok42mXftXWrAkDxFZ3Nf3CA8_3rAisrBv1JVSQRVF4Hn34sOY135AbKKdmj83sekoUCnfQWPhcfUASS6vjwEec-eRO9__RGV1b6gsev-Dg4n-IbpluILHE">
-              <button aria-label="Play video" class="absolute inset-0 m-auto w-10 h-10 rounded-full bg-white/90 group-hover:bg-white text-neutral-900 flex items-center justify-center shadow-lg transition-transform group-hover:scale-110" type="button">
-                <svg class="w-4 h-4 fill-current ml-0.5 text-blue-600" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-              </button>
-            </div>
-            <div class="px-2 pt-2.5 pb-1 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-neutral-900 text-xs">Watch Our Process</h4>
-                <p class="text-[10px] text-neutral-500">2 min • 3D Scan walkthrough</p>
-              </div>
-              <button onclick="openVideoModal()" class="text-xs text-blue-600 font-bold hover:underline">Ver</button>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -454,21 +439,6 @@
     </div>
   </div>
 
-  <!-- ==================== MODAL: VIDEO ==================== -->
-  <div id="videoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-    <div class="bg-neutral-900 rounded-3xl w-full max-w-xl p-6 relative text-white">
-      <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-white/70 hover:text-white p-2">✕</button>
-      <h3 class="text-lg font-bold mb-3">Our 3D Process</h3>
-      <div class="aspect-video bg-black rounded-2xl overflow-hidden relative flex items-center justify-center">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL2PKoUH0PvYAbyigi3LXjkprmmpaTZQ6N5s4YJQzADzFp0Az9Lcmguz2jaq-VDnIF-w5HWiPhkTUiIAlm2Thg4hcO6wY_IID2oKI_oEZ_ERLZVYXaoWCvao2sWq4DH8ok42mXftXWrAkDxFZ3Nf3CA8_3rAisrBv1JVSQRVF4Hn34sOY135AbKKdmj83sekoUCnfQWPhcfUASS6vjwEec-eRO9__RGV1b6gsev-Dg4n-IbpluILHE" class="w-full h-full object-cover opacity-60">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-          <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg mb-2">▶</div>
-          <p class="text-xs font-semibold">Simulación de escáner óptico iTero Element 5D</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ==================== SCRIPTS ==================== -->
   <script>
     // --- SMART HIDE / SHOW TOP BAR ON SCROLL ---
@@ -478,16 +448,11 @@
     window.addEventListener('scroll', () => {
       const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-      // Always show at the top of the page
       if (currentScrollY <= 40) {
         mainHeader.classList.remove('-translate-y-full');
-      } 
-      // Scrolling DOWN -> hide top bar
-      else if (currentScrollY > lastScrollY && currentScrollY > 90) {
+      } else if (currentScrollY > lastScrollY && currentScrollY > 90) {
         mainHeader.classList.add('-translate-y-full');
-      } 
-      // Scrolling UP -> reveal top bar
-      else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY < lastScrollY) {
         mainHeader.classList.remove('-translate-y-full');
       }
 
@@ -506,19 +471,8 @@
       document.body.style.overflow = 'auto';
     }
 
-    function openVideoModal() {
-      document.getElementById('videoModal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeVideoModal() {
-      document.getElementById('videoModal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
     window.onclick = (e) => {
       if (e.target === document.getElementById('bookingModal')) closeBookingModal();
-      if (e.target === document.getElementById('videoModal')) closeVideoModal();
     };
 
     function handleBookingSubmit(e) {
