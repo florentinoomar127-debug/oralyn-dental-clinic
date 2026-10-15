@@ -61,10 +61,110 @@
       -webkit-backdrop-filter: blur(16px);
     }
 
-    .slider-box {
+    /* ══ Image compare (.cmp) ════════════════════════════════════════ */
+    .cmp {
+      position: relative;
+      overflow: hidden;
+      touch-action: none;
+      cursor: ew-resize;
+      outline: none;
       user-select: none;
       -webkit-user-select: none;
+      background: #222;
     }
+
+    .cmp:focus-visible { box-shadow: 0 0 0 2px var(--signal, #2231dd); }
+
+    .cmp-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      -webkit-user-drag: none;
+    }
+
+    /* no drift now: two separate photographs have to stay exactly in
+       register, or the x-ray stops lining up with the picture */
+    .cmp-before {
+      position: absolute;
+      inset: 0;
+      will-change: clip-path;
+    }
+
+    .cmp-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 5px 12px;
+      border-radius: 99px;
+      background: rgba(23, 24, 26, 0.55);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .cmp-tag.cmp-right {
+      left: auto;
+      right: 14px;
+      background: rgba(25, 103, 210, 0.75);
+    }
+
+    /* the line is drawn, so it can bend: a 2px white curve with a
+       soft glow, over the whole block */
+    .cmp-line {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+      z-index: 20;
+    }
+
+    .cmp-line path {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 2;
+    }
+
+    .cmp-grip {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      pointer-events: none;
+      z-index: 30;
+    }
+
+    .cmp-knob {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 38px;
+      height: 38px;
+      translate: -50% -50%;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #17181a;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+      transition: scale 260ms cubic-bezier(0.3, 1.5, 0.4, 1);
+      cursor: ew-resize;
+    }
+
+    .cmp:hover .cmp-knob { scale: 1.08; }
+
+    .cmp[data-held] .cmp-knob { scale: 0.9; }
   </style>
 </head>
 <body class="selection:bg-blue-100 selection:text-blue-700">
@@ -184,7 +284,7 @@
         <div class="relative w-full h-[500px] sm:h-[560px] lg:h-full min-h-[480px] rounded-[36px] overflow-hidden bg-[#c5e4fc] concentric-arcs flex items-end justify-center shadow-soft">
           <div class="absolute inset-0 pointer-events-none concentric-arcs opacity-70"></div>
           
-          <img alt="Smiling patient with perfectly aligned teeth" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=1200&q=85">
+          <img alt="Smiling patient with perfectly aligned teeth" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=85">
 
           <!-- High-tech 3D Scan Floating Badge -->
           <div class="absolute bottom-6 left-6 right-6 sm:right-auto bg-white/95 backdrop-blur-md border border-white/80 px-4 py-3 rounded-2xl shadow-lg flex items-center gap-3">
@@ -220,13 +320,13 @@
         <!-- 1. Aligners -->
         <div class="group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
-              <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Clear Aligners Invisalign" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-white border border-neutral-100 flex items-center justify-center">
+              <img src="aligners.jpg" alt="Alineadores Invisibles Invisalign" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
             </div>
             <span class="text-[11px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full tracking-wider">INVISALIGN</span>
             <h3 class="text-lg font-bold text-neutral-900 mt-3">Clear Aligners</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
-              Invisible, removable trays for everyday comfort without wires.
+              Placas transparentes y removibles para alinear tus dientes sin alambres.
             </p>
           </div>
           <button onclick="openBookingModal('Clear Aligners')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
@@ -239,12 +339,12 @@
         <div class="group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Ceramic Aesthetic Brackets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="braces.jpg" alt="Brackets Cerámicos y Metálicos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full tracking-wider">ESTÉTICOS</span>
             <h3 class="text-lg font-bold text-neutral-900 mt-3">Ceramic Brackets</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
-              Tooth-colored brackets that blend naturally with your smile.
+              Brackets del tono de tus dientes con máxima precisión de alineación.
             </p>
           </div>
           <button onclick="openBookingModal('Ceramic Brackets')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
@@ -257,12 +357,12 @@
         <div class="group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
-              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Damon System Brackets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Planificación digital 3D ortodoncia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full tracking-wider">AUTOLIGADO</span>
             <h3 class="text-lg font-bold text-neutral-900 mt-3">Damon System</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
-              Friction-free technology for faster results and fewer appointments.
+              Tecnología de baja fricción: movimientos más rápidos y menos citas.
             </p>
           </div>
           <button onclick="openBookingModal('Damon System')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
@@ -287,24 +387,36 @@
       </div>
 
       <div class="max-w-3xl mx-auto">
-        <div class="slider-box relative rounded-3xl overflow-hidden aspect-[16/9] shadow-2xl border border-white/10" id="comparisonSlider">
-          <img src="https://images.unsplash.com/photo-1595475207225-428b62bda831?auto=format&fit=crop&w=1200&q=85" class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" alt="Sonrisa alineada después de ortodoncia">
-          <div class="absolute bottom-4 right-4 bg-blue-600/90 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full pointer-events-none shadow-md">DESPUÉS (7 Meses)</div>
+        <div class="cmp rounded-3xl aspect-[16/10] sm:aspect-[16/9] shadow-2xl border border-white/10" id="orthoCompare" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Comparación antes y después de ortodoncia">
+          <!-- After Image (background) -->
+          <img src="after.jpg" class="cmp-img" alt="Sonrisa después del tratamiento de ortodoncia alineada">
+          <span class="cmp-tag cmp-right">Después · Alineación Final</span>
 
-          <div id="beforeWrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white pointer-events-none">
-            <img id="beforeImg" src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1200&q=85" class="absolute top-0 left-0 h-full object-cover max-w-none select-none" alt="Dientes antes de ortodoncia">
-            <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">ANTES</div>
+          <!-- Before Image (clipped dynamically) -->
+          <div class="cmp-before" id="cmpBefore" style="clip-path: inset(0 50% 0 0);">
+            <img src="before.jpg" class="cmp-img" alt="Dientes antes de ortodoncia con apiñamiento">
+            <span class="cmp-tag">Antes · Caso Inicial</span>
           </div>
 
-          <div id="sliderHandle" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-8 flex items-center justify-center cursor-ew-resize">
-            <div class="w-8 h-8 rounded-full bg-white shadow-xl flex items-center justify-center text-blue-600 font-bold text-xs ring-4 ring-black/10">↔</div>
+          <!-- The line is drawn, so it can bend: 2px white curve with soft glow -->
+          <svg class="cmp-line" id="cmpSvg">
+            <path id="cmpPath" d="M 0 0 L 0 0"></path>
+          </svg>
+
+          <!-- Grip knob -->
+          <div class="cmp-grip" id="cmpGrip" style="left: 50%;">
+            <div class="cmp-knob">
+              <svg class="w-4 h-4 text-neutral-800 stroke-[2.2]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M8 7L3 12L8 17M16 7L21 12L16 17" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
           </div>
         </div>
 
         <div class="mt-6 flex justify-center gap-8 text-center text-xs text-neutral-400">
-          <div><span class="text-white font-bold">7 Months</span> • Duration</div>
-          <div><span class="text-white font-bold">Zero Pain</span> • Smooth</div>
-          <div><span class="text-white font-bold">100%</span> • Aligned</div>
+          <div><span class="text-white font-bold">7 Meses</span> • Duración</div>
+          <div><span class="text-white font-bold">Sin Dolor</span> • Cómodo</div>
+          <div><span class="text-white font-bold">100%</span> • Alineado</div>
         </div>
       </div>
 
@@ -649,36 +761,73 @@
       }
     }
 
-    // Slider
-    const sliderContainer = document.getElementById('comparisonSlider');
-    const beforeWrapper = document.getElementById('beforeWrapper');
-    const beforeImg = document.getElementById('beforeImg');
-    const sliderHandle = document.getElementById('sliderHandle');
-    let isDragging = false;
+    // ==================== IMAGE COMPARE (.cmp) ====================
+    const cmp = document.getElementById('orthoCompare');
+    const cmpBefore = document.getElementById('cmpBefore');
+    const cmpGrip = document.getElementById('cmpGrip');
+    const cmpPath = document.getElementById('cmpPath');
+    let isCmpHeld = false;
+    let currentPct = 50;
 
-    function syncSliderWidth() {
-      if (sliderContainer && beforeImg) {
-        beforeImg.style.width = sliderContainer.offsetWidth + 'px';
+    function renderCmp(pct, bend = 0) {
+      currentPct = Math.max(0, Math.min(100, pct));
+      cmpBefore.style.clipPath = `inset(0 ${100 - currentPct}% 0 0)`;
+      cmpGrip.style.left = `${currentPct}%`;
+
+      const rect = cmp.getBoundingClientRect();
+      const x = (currentPct / 100) * rect.width;
+      const h = rect.height;
+      const bendX = x + (bend * 14);
+      cmpPath.setAttribute('d', `M ${x} 0 Q ${bendX} ${h / 2} ${x} ${h}`);
+      cmp.setAttribute('aria-valuenow', Math.round(currentPct));
+    }
+
+    function handleCmpPointer(e) {
+      const rect = cmp.getBoundingClientRect();
+      const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+      const pct = (x / rect.width) * 100;
+      const bend = Math.max(-1.5, Math.min(1.5, (e.movementX || 0) / 3));
+      renderCmp(pct, isCmpHeld ? bend : 0);
+    }
+
+    cmp.addEventListener('pointerdown', (e) => {
+      isCmpHeld = true;
+      cmp.setAttribute('data-held', '');
+      cmp.setPointerCapture(e.pointerId);
+      handleCmpPointer(e);
+    });
+
+    cmp.addEventListener('pointermove', (e) => {
+      if (!isCmpHeld) return;
+      handleCmpPointer(e);
+    });
+
+    function releaseCmp(e) {
+      if (!isCmpHeld) return;
+      isCmpHeld = false;
+      cmp.removeAttribute('data-held');
+      if (e && e.pointerId && cmp.hasPointerCapture(e.pointerId)) {
+        cmp.releasePointerCapture(e.pointerId);
       }
-    }
-    window.addEventListener('resize', syncSliderWidth);
-    window.addEventListener('load', syncSliderWidth);
-    syncSliderWidth();
-
-    function updateSlider(x) {
-      const rect = sliderContainer.getBoundingClientRect();
-      let offsetX = Math.max(0, Math.min(x - rect.left, rect.width));
-      const percentage = (offsetX / rect.width) * 100;
-      beforeWrapper.style.width = `${percentage}%`;
-      sliderHandle.style.left = `${percentage}%`;
+      renderCmp(currentPct, 0);
     }
 
-    sliderContainer.addEventListener('mousedown', () => isDragging = true);
-    window.addEventListener('mouseup', () => isDragging = false);
-    window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
-    sliderContainer.addEventListener('touchstart', () => isDragging = true);
-    window.addEventListener('touchend', () => isDragging = false);
-    window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); });
+    cmp.addEventListener('pointerup', releaseCmp);
+    cmp.addEventListener('pointercancel', releaseCmp);
+
+    cmp.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        renderCmp(currentPct - 5, 0);
+        e.preventDefault();
+      } else if (e.key === 'ArrowRight') {
+        renderCmp(currentPct + 5, 0);
+        e.preventDefault();
+      }
+    });
+
+    window.addEventListener('resize', () => renderCmp(currentPct, 0));
+    window.addEventListener('load', () => renderCmp(50, 0));
+    setTimeout(() => renderCmp(50, 0), 100);
   </script>
 </body>
 </html>
