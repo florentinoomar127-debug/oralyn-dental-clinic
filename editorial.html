@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Care — Oralyn Healthcare</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              red: '#e11d48',
+              dark: '#0a0a0a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #0d0d0d;
+      color: #0a0a0a;
+      overflow-x: hidden;
+    }
+
+    /* Glass ribbons overlaying photo */
+    .glass-ribbon {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-ribbon:hover {
+      background: rgba(255, 255, 255, 0.95);
+      transform: translateX(4px);
+    }
+
+    /* Custom frame shadow */
+    .canvas-card {
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="p-2 sm:p-6 lg:p-10 flex flex-col items-center justify-center min-h-screen">
+
+  <!-- ==================== MAIN EDITORIAL CANVAS ==================== -->
+  <div class="canvas-card w-full max-w-[1440px] bg-white rounded-[32px] sm:rounded-[44px] overflow-hidden relative border border-white/10 flex flex-col justify-between min-h-[90vh]">
+    
+    <!-- ==================== TOP BAR ==================== -->
+    <header class="w-full px-6 sm:px-12 pt-8 pb-6 flex items-center justify-between z-30 relative">
+      <!-- Logo -->
+      <a href="#" class="flex flex-col leading-none group">
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-neutral-900 uppercase">Dental</span>
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-neutral-900 uppercase -mt-0.5">Helth</span>
+        <span class="text-[10px] text-neutral-500 font-medium tracking-wider mt-1">quality healthcare</span>
+      </a>
+
+      <!-- Center Pill Menu -->
+      <button onclick="toggleMenu()" class="border border-neutral-300 hover:border-black text-neutral-900 px-6 py-2 rounded-full text-xs font-bold tracking-wider hover:bg-neutral-50 transition-all active:scale-95 shadow-sm">
+        Menu
+      </button>
+
+      <!-- Right Emergency Link -->
+      <a href="tel:+18095550199" class="text-xs sm:text-sm font-bold text-neutral-900 hover:text-red-600 transition-colors flex items-center gap-1.5">
+        Dental Emergency
+      </a>
+    </header>
+
+    <!-- ==================== HERO BODY ==================== -->
+    <main class="w-full flex-grow relative flex flex-col justify-between px-6 sm:px-12 pt-4 pb-10 z-20">
+      
+      <!-- HERO BACKGROUND PHOTO (Woman in Red Turtleneck biting glasses with radiant smile) -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden flex justify-end items-end z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=85" 
+          alt="Woman smiling radiantly" 
+          class="h-full w-full sm:w-[65%] object-cover object-center lg:object-right-bottom transform translate-y-4"
+        >
+        <!-- Soft gradient mask so text on left stays 100% sharp -->
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 sm:via-white/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent sm:hidden"></div>
+      </div>
+
+      <!-- ==================== 3 HORIZONTAL FROSTED GLASS STRIPS ==================== -->
+      <div class="relative z-20 w-full max-w-4xl mx-auto my-auto space-y-2.5 pt-6 sm:pt-0">
+        
+        <!-- Strip 1 -->
+        <div class="glass-ribbon rounded-2xl sm:rounded-3xl h-14 sm:h-20 flex items-center justify-center px-6 shadow-sm cursor-pointer group">
+          <span class="text-lg sm:text-2xl font-bold text-neutral-900 tracking-tight group-hover:scale-105 transition-transform">
+            Advanced Dentistry
+          </span>
+        </div>
+
+        <!-- Strip 2 -->
+        <div class="glass-ribbon rounded-2xl sm:rounded-3xl h-14 sm:h-20 flex items-center justify-center px-6 shadow-sm cursor-pointer group">
+          <span class="text-lg sm:text-2xl font-bold text-neutral-900 tracking-tight group-hover:scale-105 transition-transform">
+            High Quality Equipment
+          </span>
+        </div>
+
+        <!-- Strip 3 -->
+        <div class="glass-ribbon rounded-2xl sm:rounded-3xl h-14 sm:h-20 flex items-center justify-center px-6 shadow-sm cursor-pointer group">
+          <span class="text-lg sm:text-2xl font-bold text-neutral-900 tracking-tight group-hover:scale-105 transition-transform">
+            Friendly Staff
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ==================== BOTTOM EDITORIAL CONTENT ==================== -->
+      <div class="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end pt-12">
+        
+        <!-- Bottom Left: Massive Typography -->
+        <div class="md:col-span-7 space-y-4">
+          <p class="text-xs sm:text-sm font-medium text-neutral-700 max-w-xs leading-relaxed">
+            We wish to provide professional dental services that match the current technologies
+          </p>
+          
+          <div class="pt-6">
+            <span class="text-xs font-bold text-neutral-800 tracking-wide block mb-2">
+              Trusted Dentist in West New York
+            </span>
+            <h1 class="text-6xl sm:text-7xl lg:text-[105px] font-black text-black tracking-tighter leading-[0.88]">
+              Dental<br>
+              Care
+            </h1>
+          </div>
+        </div>
+
+        <!-- Bottom Right: Tagline & CTA Button -->
+        <div class="md:col-span-5 flex flex-col items-start md:items-end text-left md:text-right space-y-4">
+          <h3 class="text-xl sm:text-2xl font-bold text-white sm:text-neutral-900 drop-shadow-md sm:drop-shadow-none tracking-tight max-w-xs leading-snug">
+            We believe in the power of your smile
+          </h3>
+
+          <div class="flex flex-col items-start md:items-end gap-2 pt-2">
+            <span class="text-xs font-medium text-white/90 sm:text-neutral-600 drop-shadow-sm">
+              Free Consultation
+            </span>
+            <button onclick="openBooking()" class="bg-white hover:bg-neutral-900 text-neutral-900 hover:text-white border border-neutral-300 font-bold text-sm sm:text-base px-8 py-3.5 rounded-full shadow-lg hover:shadow-2xl active:scale-95 transition-all duration-200">
+              Book Online
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ==================== DOWN BAR (A LO ÚLTIMO DE LA WEB) ==================== -->
+    <footer class="w-full border-t border-neutral-200/80 bg-white/90 backdrop-blur-md px-6 sm:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 z-30">
+      <div class="flex items-center gap-4 text-xs text-neutral-500 font-medium">
+        <span>© 2026 Dental Helth Studio</span>
+        <span>•</span>
+        <span>Av. Abraham Lincoln 402</span>
+      </div>
+
+      <nav class="flex items-center gap-6 text-xs font-bold text-neutral-700">
+        <a href="#" class="hover:text-black transition-colors">HOME</a>
+        <a href="#" class="hover:text-black transition-colors">SERVICES</a>
+        <a href="#" class="hover:text-black transition-colors">DOCTORS</a>
+        <a href="https://wa.me/18095550199" target="_blank" class="text-emerald-600 hover:underline">WHATSAPP</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl relative">
+      <button onclick="closeBooking()" class="absolute top-4 right-4 text-neutral-400 hover:text-black p-2 font-bold text-lg">✕</button>
+      <h3 class="text-2xl font-black text-neutral-900 tracking-tight">Book Consultation</h3>
+      <p class="text-xs text-neutral-500 mt-1">Free 3D digital diagnosis & consultation.</p>
+
+      <form onsubmit="handleSub(event)" class="mt-6 space-y-4">
+        <input type="text" id="mName" placeholder="Full Name" required class="w-full text-sm rounded-xl border-neutral-200 py-3 px-4 focus:ring-black focus:border-black">
+        <input type="tel" id="mPhone" placeholder="WhatsApp / Phone" required class="w-full text-sm rounded-xl border-neutral-200 py-3 px-4 focus:ring-black focus:border-black">
+        <button type="submit" class="w-full bg-black hover:bg-neutral-800 text-white font-bold text-xs py-4 rounded-xl shadow-lg active:scale-95 transition-all">
+          CONFIRM VIA WHATSAPP
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openBooking() { document.getElementById('modal').classList.remove('hidden'); }
+    function closeBooking() { document.getElementById('modal').classList.add('hidden'); }
+    function toggleMenu() { openBooking(); }
+    function handleSub(e) {
+      e.preventDefault();
+      const n = document.getElementById('mName').value;
+      const p = document.getElementById('mPhone').value;
+      window.open(`https://wa.me/18095550199?text=Hola,%20soy%20${encodeURIComponent(n)}%20(${encodeURIComponent(p)}).%20Deseo%20agendar%20mi%20cita%20online.`, '_blank');
+      closeBooking();
+    }
+  </script>
+</body>
+</html>
