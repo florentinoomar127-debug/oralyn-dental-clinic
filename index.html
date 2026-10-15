@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oralyn — The Future of Dental Care, Today</title>
+  <meta name="description" content="Ortodoncia invisible, Digital Smile Design y odontología estética de vanguardia. Diseña tu sonrisa perfecta con tecnología 3D y atención premium.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans / Inter / JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6fc',
+              100: '#dbeefd',
+              200: '#bfe1fb',
+              500: '#1967d2',
+              600: '#0d6efd',
+              700: '#004ac6',
+              800: '#003694',
+              900: '#0b1c30',
+              dark: '#111827',
+            }
+          },
+          boxShadow: {
+            'glow': '0 10px 25px -3px rgba(25, 103, 210, 0.45)',
+            'soft': '0 12px 35px -4px rgba(17, 24, 39, 0.05)',
+            'float': '0 20px 40px -10px rgba(0, 0, 0, 0.12)',
+            'inner-glow': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.8)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #ffffff;
+      color: #111827;
+      overflow-x: hidden;
+    }
+
+    /* Concentric background rings overlay */
+    .concentric-arcs {
+      background-image: radial-gradient(circle at 75% 20%, transparent 180px, rgba(255, 255, 255, 0.45) 181px, rgba(255, 255, 255, 0.45) 182px, transparent 183px, transparent 270px, rgba(255, 255, 255, 0.35) 271px, rgba(255, 255, 255, 0.35) 272px, transparent 273px, transparent 380px, rgba(255, 255, 255, 0.25) 381px, rgba(255, 255, 255, 0.25) 382px, transparent 383px);
+    }
+
+    /* Subtle Card Gradients */
+    .card-gradient {
+      background: linear-gradient(145deg, #f8fafd 0%, #edf3f9 100%);
+    }
+
+    /* Apple-like spring transition */
+    .spring-bounce {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    /* Before After Image Slider */
+    .slider-container {
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Custom Glassmorphism */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-100 selection:text-brand-700">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 w-full glass-nav border-b border-neutral-100/80 transition-all duration-300" id="mainHeader">
+    <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="text-2xl sm:text-[26px] font-bold tracking-tight text-neutral-900 flex items-center gap-1.5 group">
+        <span>Oralyn</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-500 group-hover:scale-125 transition-transform"></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-9 text-[13px] font-semibold tracking-wider text-neutral-700">
+        <a href="#hero" class="hover:text-brand-500 transition-colors">HOME</a>
+        <a href="#treatments" class="hover:text-brand-500 transition-colors">TREATMENTS</a>
+        <a href="#before-after" class="hover:text-brand-500 transition-colors">RESULTS</a>
+        <a href="#process" class="hover:text-brand-500 transition-colors">PROCESS</a>
+        <a href="#technology" class="hover:text-brand-500 transition-colors">TECH</a>
+        <a href="#faq" class="hover:text-brand-500 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="tel:+18095550199" class="text-xs font-semibold text-neutral-500 hover:text-neutral-900 hidden lg:inline-flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          (809) 555-0199
+        </a>
+        <button onclick="openBookingModal()" class="inline-flex items-center gap-2 border border-neutral-300 hover:border-brand-500 hover:text-brand-500 bg-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wider text-neutral-800 transition-all shadow-sm active:scale-95">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span>CONTACT US</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl text-neutral-700 hover:bg-neutral-100 transition-colors" aria-label="Abrir Menú">
+        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-neutral-100 bg-white px-6 py-6 shadow-xl space-y-4">
+      <nav class="flex flex-col space-y-3 text-sm font-semibold text-neutral-700">
+        <a href="#hero" onclick="toggleMobileMenu()" class="py-2 hover:text-brand-500">HOME</a>
+        <a href="#treatments" onclick="toggleMobileMenu()" class="py-2 hover:text-brand-500">TREATMENTS</a>
+        <a href="#before-after" onclick="toggleMobileMenu()" class="py-2 hover:text-brand-500">RESULTS (BEFORE & AFTER)</a>
+        <a href="#process" onclick="toggleMobileMenu()" class="py-2 hover:text-brand-500">HOW IT WORKS</a>
+        <a href="#technology" onclick="toggleMobileMenu()" class="py-2 hover:text-brand-500">TECHNOLOGY</a>
+        <a href="#faq" onclick="toggleMobileMenu()" class="py-2 hover:text-brand-500">FAQ</a>
+      </nav>
+      <div class="pt-4 border-t border-neutral-100 flex flex-col gap-3">
+        <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full text-center bg-brand-500 text-white font-bold text-xs py-3.5 rounded-full shadow-glow">
+          SCHEDULE CONSULTATION
+        </button>
+        <a href="https://wa.me/18095550199?text=Hola,%20deseo%20información%20sobre%20los%20tratamientos%20en%20Oralyn" target="_blank" class="w-full text-center border border-neutral-200 text-neutral-800 font-bold text-xs py-3 rounded-full flex items-center justify-center gap-2">
+          WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (EXACT 1:1 STITCH DESIGN) ==================== -->
+  <main id="hero" class="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-3 pb-16 lg:pb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+      
+      <!-- Left Column: Content & Features -->
+      <section class="lg:col-span-6 flex flex-col justify-between py-2 sm:py-4">
+        
+        <!-- Top Section: Social Proof & Main Headline -->
+        <div class="space-y-6">
+          
+          <!-- Social Proof Avatar Group -->
+          <div class="flex items-center gap-3.5" data-purpose="social-proof">
+            <div class="flex -space-x-2 overflow-hidden">
+              <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAa-DJVNb-y0ZQs7nWYUpiLSK8IZtsbBud3OJISZIw9zPXZKnpgCBgWA34hImoQ1FlmD9UGsqDi5ZprRV6MMJkD73L5KZ8eMTciPh751WBtmDxRfmUwmVl552QFnJczpgOu1sPRTnlqdQbQRu0z_xR1x9etQn6_6-Awmgx6kVHJvplWUNx3Ae-6m5Svqe_wrzDzsHJxFlAAs4bbTS9F_w8eX97DZfAwvg9DsZlBL9qsLA4y_FyEqLk">
+              <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA17zFeG6FjgsYLBpXpfKpui_SqgiJz0urwhjfPt2lwoT_7hLjP2Qi5b8zASCiVzN31RuO7_eM-VPU-k_IGW7I1OKH6sqdb-BIDbl1l5cbv2pIym8hL22M78HrYe4LIw14sgXGkKo8PbZBehG_fFNrzq_XX3kvsVQevKX4LIB0cdlbI6tHoyoBmXAaVclBBGCXTIVAC2s6CVkV73AmzL6BxE2aSvffk1_ErRoMFaAWb-QQzKv4jibFH">
+              <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSXLNycPp0bX5RlDfwDEGWLn6mxjYbpT9R3YCs0hyynezIQWwJwBhnfP5l0zhD8x9XV5aPbuzJydF6TSTEiDoeXMDNBF_-Lv8BgZGWdxAD7NsReyjpneWPRAaJqfNDI-piKJo4ffo7WdoJfoK0r1pSn23UWE0ymOK4jaqB865mb6HQQeTKQF5t4YxO0j2E8gU_sreK_oEMxvXH2sciTL3rE214y4kNbibjo3ouH5wkjNVCzOKKAiyz">
+            </div>
+            <div class="leading-tight">
+              <span class="block text-sm font-bold text-neutral-900 leading-none">16k+</span>
+              <span class="text-[11px] font-medium text-neutral-500">Satisfied Patients</span>
+            </div>
+          </div>
+
+          <!-- Hero Main Heading -->
+          <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] pt-2">
+            The Future of<br>
+            Dental Care,<br>
+            <span class="inline-flex items-center gap-3 sm:gap-4">
+              <!-- Long thin Arrow -->
+              <span class="inline-flex items-center text-neutral-400">
+                <svg class="w-16 sm:w-28 h-7 text-neutral-400 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 120 24">
+                  <line x1="2" x2="114" y1="12" y2="12"></line>
+                  <polyline points="106 5 115 12 106 19"></polyline>
+                </svg>
+              </span>
+              <span>Today.</span>
+            </span>
+          </h1>
+
+          <!-- CTA & Description Area -->
+          <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
+            <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
+              <span>SCHEDULE CONSULTATION</span>
+              <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-600 max-w-[240px]">
+              Crafting a confident smile That lights up every room And leaves a lasting impression
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Feature Cards Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 sm:pt-14" data-purpose="features-cards">
+          
+          <!-- Feature Card 1 -->
+          <div class="card-gradient rounded-3xl p-6 border border-white/80 shadow-soft flex flex-col justify-between h-[180px] hover:border-brand-200 hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm mb-4">
+                <!-- Tooth Icon -->
+                <svg class="w-4 h-4 text-neutral-700 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-bold text-neutral-900 text-sm mb-1.5">Digital Smile Design</h3>
+              <p class="text-[11px] leading-normal text-neutral-500">
+                See a larger preview of your new smile before you begin treatment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div class="card-gradient rounded-3xl p-6 border border-white/80 shadow-soft flex flex-col justify-between h-[180px] hover:border-brand-200 hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm mb-4">
+                <!-- Sparkle / AI Icon -->
+                <svg class="w-4 h-4 text-neutral-700 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-bold text-neutral-900 text-sm mb-1.5">AI Powered Diagnostics</h3>
+              <p class="text-[11px] leading-normal text-neutral-500">
+                Precise and early detection of dental issues for effective treatment.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Right Column: Photography & Video Card Overlay -->
+      <section class="lg:col-span-6 relative flex flex-col items-stretch" data-purpose="hero-media">
+        <!-- Main Hero Image Container -->
+        <div class="relative w-full h-[520px] sm:h-[580px] lg:h-full min-h-[500px] rounded-[36px] overflow-hidden bg-[#bfe1fb] concentric-arcs flex items-end justify-center shadow-sm">
+          <!-- Background Decorative Arc Overlays -->
+          <div class="absolute inset-0 pointer-events-none concentric-arcs opacity-60"></div>
+          
+          <!-- Smiling Patient Photo -->
+          <img alt="Young woman smiling radiantly in modern dental clinic" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi">
+          
+          <!-- Floating Video Card Overlay (bottom-right) -->
+          <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 w-64 sm:w-72 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 shadow-xl border border-white/60 transition-transform duration-300 hover:scale-[1.02]" data-purpose="floating-video-card">
+            <!-- Video Thumbnail -->
+            <div class="relative w-full h-32 sm:h-36 rounded-xl overflow-hidden bg-neutral-200 group cursor-pointer" onclick="openVideoModal()">
+              <img alt="Dentist in clinic examination room" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL2PKoUH0PvYAbyigi3LXjkprmmpaTZQ6N5s4YJQzADzFp0Az9Lcmguz2jaq-VDnIF-w5HWiPhkTUiIAlm2Thg4hcO6wY_IID2oKI_oEZ_ERLZVYXaoWCvao2sWq4DH8ok42mXftXWrAkDxFZ3Nf3CA8_3rAisrBv1JVSQRVF4Hn34sOY135AbKKdmj83sekoUCnfQWPhcfUASS6vjwEec-eRO9__RGV1b6gsev-Dg4n-IbpluILHE">
+              <!-- Centered Play Button -->
+              <button aria-label="Play video process" class="absolute inset-0 m-auto w-10 h-10 rounded-full bg-white/90 group-hover:bg-white text-neutral-900 flex items-center justify-center shadow-lg transition-transform group-hover:scale-110 active:scale-95" type="button">
+                <svg class="w-4 h-4 fill-current ml-0.5 text-brand-600" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </button>
+            </div>
+            <!-- Video Text Content -->
+            <div class="px-2 pt-3 pb-1.5 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-neutral-900 text-[13px] leading-tight">Watch Our Process</h4>
+                <p class="text-[11px] text-neutral-500 leading-snug mt-1">
+                  A smile that lights up every room and leaves a mark
+                </p>
+              </div>
+              <button onclick="openVideoModal()" class="p-1.5 rounded-full hover:bg-neutral-100 text-neutral-400 hover:text-brand-600 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== BRAND TRUST METRICS BAR ==================== -->
+  <section class="border-y border-neutral-100 bg-neutral-50/70 py-10">
+    <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">16,000+</div>
+          <div class="text-xs sm:text-sm font-medium text-neutral-500">Pacientes Satisfechos</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-600 tracking-tight">99.4%</div>
+          <div class="text-xs sm:text-sm font-medium text-neutral-500">Tasa de Éxito en Alineación</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">3D Scan</div>
+          <div class="text-xs sm:text-sm font-medium text-neutral-500">Cero Moldes Pastosos</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-600 tracking-tight">4.9 ★★★★★</div>
+          <div class="text-xs sm:text-sm font-medium text-neutral-500">En Google Reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TREATMENTS / SERVICES SECTION ==================== -->
+  <section id="treatments" class="py-20 lg:py-28 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold tracking-widest font-mono text-brand-600 uppercase bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-100">
+          CLINICAL EXCELLENCE
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight mt-4">
+          Tratamientos diseñados para transformar tu confianza
+        </h2>
+        <p class="text-neutral-500 text-sm sm:text-base mt-3 leading-relaxed">
+          Combinamos tecnología biomecánica de punta con visión estética para resultados impecables, rápidos y sin dolor.
+        </p>
+      </div>
+      <div>
+        <button onclick="openBookingModal()" class="inline-flex items-center gap-2 text-xs font-bold text-brand-600 bg-brand-50 hover:bg-brand-100 px-5 py-3 rounded-full transition-colors">
+          <span>Ver disponibilidad de citas</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Treatment Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      
+      <!-- Card 1: Invisible Orthodontics -->
+      <div class="bg-white rounded-3xl p-8 border border-neutral-100 shadow-soft hover:shadow-float hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <span class="text-[11px] font-mono font-bold bg-green-50 text-green-700 px-3 py-1 rounded-full border border-green-200">
+              MÁS POPULAR
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 group-hover:text-brand-600 transition-colors">Alineadores Invisibles</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2.5 leading-relaxed">
+            Placas transparentes termoformadas que alinean tus dientes sin metales, sin llagas y retirables al comer.
+          </p>
+          <ul class="mt-6 space-y-2 text-xs text-neutral-600 font-medium">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>100% imperceptibles a la vista</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Tratamientos desde 4 a 9 meses</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Revisiones virtuales mensuales</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+          <span class="text-xs font-bold text-neutral-400">Plan personalizado</span>
+          <button onclick="openBookingModal('Alineadores Invisibles')" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span>Cotizar Caso</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Digital Smile Design (DSD) -->
+      <div class="bg-white rounded-3xl p-8 border border-neutral-100 shadow-soft hover:shadow-float hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <span class="text-[11px] font-mono font-bold bg-blue-50 text-brand-700 px-3 py-1 rounded-full border border-blue-200">
+              INNOVACIÓN
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 group-hover:text-brand-600 transition-colors">Digital Smile Design</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2.5 leading-relaxed">
+            Simulación digital facial y volumétrica. Observa en 3D cómo lucirá tu sonrisa exacta antes de tocar un solo diente.
+          </p>
+          <ul class="mt-6 space-y-2 text-xs text-neutral-600 font-medium">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Fotografía clínica y análisis de proporciones</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Mock-up físico de prueba en vivo</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Co-diseñado junto a tu fisionomía</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+          <span class="text-xs font-bold text-neutral-400">En la 1ra consulta</span>
+          <button onclick="openBookingModal('Digital Smile Design')" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span>Ver Simulación</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Laser Whitening -->
+      <div class="bg-white rounded-3xl p-8 border border-neutral-100 shadow-soft hover:shadow-float hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="text-[11px] font-mono font-bold bg-purple-50 text-purple-700 px-3 py-1 rounded-full border border-purple-200">
+              EXPRESS 45 MIN
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 group-hover:text-brand-600 transition-colors">Blanqueamiento Láser Frío</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2.5 leading-relaxed">
+            Aclara hasta 8 tonos en una sola sesión de 45 minutos gracias a nuestra fórmula bio-remineralizante sin sensibilidad.
+          </p>
+          <ul class="mt-6 space-y-2 text-xs text-neutral-600 font-medium">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Protección gingival de barrera</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Sin daño al esmalte dental</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Kit de mantenimiento incluido</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+          <span class="text-xs font-bold text-neutral-400">Sesión única</span>
+          <button onclick="openBookingModal('Blanqueamiento Láser')" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span>Agendar Sesión</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== BEFORE & AFTER INTERACTIVE SLIDER ==================== -->
+  <section id="before-after" class="py-20 bg-neutral-900 text-white relative overflow-hidden">
+    <!-- Subtle glow orb -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold tracking-widest font-mono text-brand-200 uppercase bg-white/10 px-3.5 py-1.5 rounded-full backdrop-blur-md">
+          CASOS REALES
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-4 text-white">
+          Desliza para ver la transformación
+        </h2>
+        <p class="text-neutral-400 text-xs sm:text-sm mt-3">
+          Arrastra la barra en el centro para comparar el estado inicial con el resultado final logrado con nuestros alineadores Oralyn.
+        </p>
+      </div>
+
+      <!-- Slider Container -->
+      <div class="max-w-4xl mx-auto">
+        <div class="slider-container relative rounded-3xl overflow-hidden aspect-[16/9] shadow-2xl border border-white/10 select-none" id="comparisonSlider">
+          
+          <!-- AFTER Image (Underneath) -->
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi" alt="Sonrisa después de tratamiento Oralyn" class="absolute inset-0 w-full h-full object-cover">
+          
+          <div class="absolute bottom-6 right-6 bg-brand-600 text-white font-mono text-xs font-bold px-3 py-1.5 rounded-full shadow-lg pointer-events-none">
+            DESPUÉS (7 Meses)
+          </div>
+
+          <!-- BEFORE Image (Overlay with clip-path) -->
+          <div id="beforeImageWrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white pointer-events-none">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLwE9YS6s_PJYg76lOYHQty0Fgchiwwg3mCvxmF_ly9i6jgudHZbv9udUfUShba0pG1hKgaVPlG6VuBwZO88JNeSF3YbG11ANtGAkf1vMJbJzraMBHsKX_krqqpFlYVMAj-05F5Zrr5TnywaphkSzB4Bk_bH-QvnuNZYhZrtD1kgvD4O-TMtwrEC_9RDj0IYU7Y1hZltyuoNJJV0UYNMN8OJ-8gYUX4SutRz5HMghf1MnpoPI1NZi" alt="Sonrisa antes del tratamiento" class="absolute inset-0 w-full h-full object-cover max-w-none grayscale contrast-125" style="width: 200%; max-width: 200%;">
+            <div class="absolute bottom-6 left-6 bg-neutral-900/90 text-white font-mono text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+              ANTES (Día 1)
+            </div>
+          </div>
+
+          <!-- Drag Handle -->
+          <div id="sliderHandle" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-10 flex items-center justify-center cursor-ew-resize">
+            <div class="w-10 h-10 rounded-full bg-white text-neutral-900 shadow-2xl flex items-center justify-center font-bold text-xs ring-4 ring-black/20">
+              <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Case Stats Below Slider -->
+        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="text-xs text-neutral-400">Duración Total</div>
+            <div class="text-lg sm:text-xl font-bold text-white mt-1">7 Meses</div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="text-xs text-neutral-400">Alineadores Usados</div>
+            <div class="text-lg sm:text-xl font-bold text-brand-400 mt-1">22 Placas</div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="text-xs text-neutral-400">Molestias Clínicas</div>
+            <div class="text-lg sm:text-xl font-bold text-green-400 mt-1">0% Dolor</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4-STEP PATIENT PROCESS ==================== -->
+  <section id="process" class="py-20 lg:py-28 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-bold tracking-widest font-mono text-brand-600 uppercase bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-100">
+        FLUJO SIMPLE Y TRANSPARENTE
+      </span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight mt-4">
+        Tu nueva sonrisa en 4 pasos sin fricción
+      </h2>
+      <p class="text-neutral-500 text-sm sm:text-base mt-3">
+        Diseñamos una experiencia médica donde cada minuto está optimizado para tu confort y tranquilidad.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Step 1 -->
+      <div class="bg-neutral-50/70 border border-neutral-200/60 rounded-3xl p-7 relative flex flex-col justify-between hover:bg-white hover:shadow-soft transition-all duration-300">
+        <div>
+          <span class="text-4xl font-extrabold font-mono text-brand-200">01</span>
+          <h3 class="text-lg font-bold text-neutral-900 mt-4">Escaneo Óptico 3D</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2 leading-relaxed">
+            Sin pastas desagradables. Un escáner iTero captura 6,000 imágenes por segundo creando un gemelo digital exacto de tu boca.
+          </p>
+        </div>
+        <div class="mt-6 text-[11px] font-mono text-brand-600 font-bold">Tiempo: 15 minutos</div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-neutral-50/70 border border-neutral-200/60 rounded-3xl p-7 relative flex flex-col justify-between hover:bg-white hover:shadow-soft transition-all duration-300">
+        <div>
+          <span class="text-4xl font-extrabold font-mono text-brand-200">02</span>
+          <h3 class="text-lg font-bold text-neutral-900 mt-4">Simulación Virtual</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2 leading-relaxed">
+            Nuestro software biomecánico proyecta cómo se moverá cada pieza semana a semana hasta alcanzar la simetría perfecta.
+          </p>
+        </div>
+        <div class="mt-6 text-[11px] font-mono text-brand-600 font-bold">Aprobación en vivo</div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-neutral-50/70 border border-neutral-200/60 rounded-3xl p-7 relative flex flex-col justify-between hover:bg-white hover:shadow-soft transition-all duration-300">
+        <div>
+          <span class="text-4xl font-extrabold font-mono text-brand-200">03</span>
+          <h3 class="text-lg font-bold text-neutral-900 mt-4">Entrega de Alineadores</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2 leading-relaxed">
+            Recibes tu set completo de alineadores médicos ultra-delgados con instructivo de uso y estuche de viaje antibacterial.
+          </p>
+        </div>
+        <div class="mt-6 text-[11px] font-mono text-brand-600 font-bold">En 48 - 72 horas</div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-neutral-50/70 border border-neutral-200/60 rounded-3xl p-7 relative flex flex-col justify-between hover:bg-white hover:shadow-soft transition-all duration-300">
+        <div>
+          <span class="text-4xl font-extrabold font-mono text-brand-200">04</span>
+          <h3 class="text-lg font-bold text-neutral-900 mt-4">Monitoreo Inteligente</h3>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-2 leading-relaxed">
+            Envía fotos desde tu smartphone mediante nuestra app para que el ortodoncista valide tus avances sin tener que faltar al trabajo.
+          </p>
+        </div>
+        <div class="mt-6 text-[11px] font-mono text-brand-600 font-bold">Soporte 24/7</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COMPARISON TABLE: ORALYN VS TRADITIONAL ==================== -->
+  <section id="technology" class="py-20 bg-brand-50/50 border-y border-brand-100/60">
+    <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest font-mono text-brand-600 uppercase bg-white px-3.5 py-1.5 rounded-full border border-brand-200 shadow-sm">
+          ¿POR QUÉ ELEGIRNOS?
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight mt-4">
+          La diferencia entre el pasado y Oralyn
+        </h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-soft border border-neutral-200/80 overflow-hidden">
+        <div class="grid grid-cols-3 p-6 sm:p-8 bg-neutral-900 text-white font-bold text-xs sm:text-sm tracking-wider">
+          <div>CARACTERÍSTICA</div>
+          <div class="text-neutral-400">ORTODONCIA TRADICIONAL</div>
+          <div class="text-brand-400 flex items-center gap-1.5">
+            <span>ORALYN CLINIC</span>
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+          </div>
+        </div>
+
+        <div class="divide-y divide-neutral-100 text-xs sm:text-sm font-medium">
+          <!-- Row 1 -->
+          <div class="grid grid-cols-3 p-6 sm:p-8 items-center">
+            <div class="font-bold text-neutral-900">Toma de Impresiones</div>
+            <div class="text-neutral-500">Pasta fría y náuseas</div>
+            <div class="text-brand-600 font-bold flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Escaneo Láser 3D sin contacto
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="grid grid-cols-3 p-6 sm:p-8 items-center bg-neutral-50/50">
+            <div class="font-bold text-neutral-900">Visibilidad Estética</div>
+            <div class="text-neutral-500">Brackets metálicos notorios</div>
+            <div class="text-brand-600 font-bold flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              100% Transparentes e invisibles
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="grid grid-cols-3 p-6 sm:p-8 items-center">
+            <div class="font-bold text-neutral-900">Dolor y Aftas</div>
+            <div class="text-neutral-500">Alambres punzantes y heridas</div>
+            <div class="text-brand-600 font-bold flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Bordes pulidos con láser suave
+            </div>
+          </div>
+          <!-- Row 4 -->
+          <div class="grid grid-cols-3 p-6 sm:p-8 items-center bg-neutral-50/50">
+            <div class="font-bold text-neutral-900">Tiempo de Tratamiento</div>
+            <div class="text-neutral-500">18 a 36 meses promedio</div>
+            <div class="text-brand-600 font-bold flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              4 a 9 meses acelerado
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS & REVIEWS ==================== -->
+  <section class="py-20 lg:py-28 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+      <div>
+        <span class="text-xs font-bold tracking-widest font-mono text-brand-600 uppercase bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-100">
+          EXPERIENCIAS REALES
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight mt-4">
+          Lo que dicen nuestros pacientes
+        </h2>
+      </div>
+      <div class="flex items-center gap-2 bg-neutral-100 px-4 py-2 rounded-2xl">
+        <span class="text-amber-500 font-bold">★★★★★</span>
+        <span class="text-xs font-bold text-neutral-800">4.9 / 5.0 (Google Verified)</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      
+      <!-- Review 1 -->
+      <div class="bg-white rounded-3xl p-8 border border-neutral-100 shadow-soft flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+            "Tenía miedo de ponerme brackets a mis 32 años por mi trabajo ejecutivo. Con Oralyn nadie en la oficina notó que llevaba alineadores. En 6 meses mis dientes estaban totalmente alineados."
+          </p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center gap-3">
+          <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Camila Santos">
+          <div>
+            <div class="text-xs font-bold text-neutral-900">Camila Santos</div>
+            <div class="text-[11px] text-neutral-400">Tratamiento Invisalign • 6 meses</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white rounded-3xl p-8 border border-neutral-100 shadow-soft flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+            "La tecnología del escaneo 3D es impresionante. En la misma primera consulta me mostraron cómo iba a quedar mi sonrisa terminada. Cero dolor, atención 10 de 10."
+          </p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center gap-3">
+          <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="David Rivas">
+          <div>
+            <div class="text-xs font-bold text-neutral-900">David Rivas</div>
+            <div class="text-[11px] text-neutral-400">Digital Smile Design + Blanqueamiento</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white rounded-3xl p-8 border border-neutral-100 shadow-soft flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+            "Súper puntuales y las instalaciones parecen un hotel de lujo, nada que ver con el olor a dentista tradicional. El plan de financiamiento me facilitó todo."
+          </p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center gap-3">
+          <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Lic. Laura Peña">
+          <div>
+            <div class="text-xs font-bold text-neutral-900">Lic. Laura Peña</div>
+            <div class="text-[11px] text-neutral-400">Alineadores Oralyn Pro</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION ==================== -->
+  <section id="faq" class="py-20 bg-neutral-50/60 border-t border-neutral-100">
+    <div class="max-w-3xl mx-auto px-6 sm:px-10">
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold tracking-widest font-mono text-brand-600 uppercase bg-brand-50 px-3.5 py-1.5 rounded-full border border-brand-100">
+          PREGUNTAS FRECUENTES
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight mt-4">
+          Resolvemos tus dudas antes de iniciar
+        </h2>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-2xl border border-neutral-200/80 p-5 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-sm sm:text-base text-neutral-900">
+            <span>¿Cuánto dura en promedio el tratamiento de alineadores invisibles?</span>
+            <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pt-3 text-xs sm:text-sm text-neutral-500 leading-relaxed border-t border-neutral-100 mt-3">
+            La mayoría de casos leves o moderados toman entre 4 y 9 meses. En casos complejos de mordida severa puede extenderse a 12 meses. Con nuestro escáner 3D sabrás la duración exacta de tu caso desde el primer día.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-2xl border border-neutral-200/80 p-5 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-sm sm:text-base text-neutral-900">
+            <span>¿Duele ponerse o usar los alineadores?</span>
+            <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pt-3 text-xs sm:text-sm text-neutral-500 leading-relaxed border-t border-neutral-100 mt-3">
+            No. Sentirás una ligera presión durante las primeras 24-48 horas con cada cambio de placa, lo cual indica que los dientes se están moviendo biológicamente. No hay alambres metálicos que provoquen llagas ni cortes.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-2xl border border-neutral-200/80 p-5 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-sm sm:text-base text-neutral-900">
+            <span>¿Qué incluye la primera consulta de diagnóstico?</span>
+            <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pt-3 text-xs sm:text-sm text-neutral-500 leading-relaxed border-t border-neutral-100 mt-3">
+            Incluye escaneo intraoral 3D con tecnología iTero, serie fotográfica clínica de alta definición, evaluación periodontal completa y la simulación virtual computarizada de tu sonrisa antes y después.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-2xl border border-neutral-200/80 p-5 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full text-left flex items-center justify-between font-bold text-sm sm:text-base text-neutral-900">
+            <span>¿Ofrecen planes de financiamiento mensual?</span>
+            <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pt-3 text-xs sm:text-sm text-neutral-500 leading-relaxed border-t border-neutral-100 mt-3">
+            Sí. Contamos con planes sin intereses diferidos a 6, 12 y 18 cuotas, además de aceptar las principales aseguradoras médicas nacionales y tarjetas de crédito internacionales.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== APPOINTMENT CALL TO ACTION BANNER ==================== -->
+  <section class="py-20 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="bg-gradient-to-r from-brand-900 via-neutral-900 to-brand-800 text-white rounded-[40px] p-8 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div class="max-w-xl space-y-4">
+        <span class="text-xs font-mono font-bold tracking-widest text-brand-200 bg-white/10 px-3.5 py-1.5 rounded-full backdrop-blur-md">
+          DISPONIBILIDAD ESTA SEMANA
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          Tu sonrisa soñada empieza con una conversación.
+        </h2>
+        <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+          Agenda tu escaneo digital 3D hoy mismo y descubre exactamente cómo lucirá tu sonrisa. Sin compromiso.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+        <button onclick="openBookingModal()" class="bg-brand-500 hover:bg-brand-600 active:scale-95 text-white font-bold text-xs sm:text-sm px-8 py-4 rounded-full shadow-glow transition-all text-center">
+          AGENDAR MI CONSULTA 3D
+        </button>
+        <a href="https://wa.me/18095550199?text=Hola%20Oralyn!%20Quiero%20agendar%20mi%20cita%20de%20evaluación%203D" target="_blank" class="bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-7 py-4 rounded-full border border-white/20 transition-all flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.391.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"></path></svg>
+          Chat por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-neutral-100 bg-white pt-16 pb-12">
+    <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <div class="space-y-4">
+          <a href="#" class="text-2xl font-bold tracking-tight text-neutral-900 flex items-center gap-1.5">
+            <span>Oralyn</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+          </a>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            The Future of Dental Care, Today. Clínica especializada en ortodoncia digital de alta precisión, diseño de sonrisa y estética mínimamente invasiva.
+          </p>
+          <div class="text-xs text-neutral-400 font-mono">
+            Licencia Médica MSP No. 4920-DO
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold font-mono tracking-wider text-neutral-900 uppercase mb-4">Tratamientos</h4>
+          <ul class="space-y-2.5 text-xs text-neutral-500">
+            <li><a href="#treatments" class="hover:text-brand-600 transition-colors">Alineadores Invisibles</a></li>
+            <li><a href="#treatments" class="hover:text-brand-600 transition-colors">Digital Smile Design (DSD)</a></li>
+            <li><a href="#treatments" class="hover:text-brand-600 transition-colors">Blanqueamiento Láser Frío</a></li>
+            <li><a href="#treatments" class="hover:text-brand-600 transition-colors">Carillas de Porcelana</a></li>
+            <li><a href="#treatments" class="hover:text-brand-600 transition-colors">Odontopediatría Integral</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold font-mono tracking-wider text-neutral-900 uppercase mb-4">Horarios y Ubicación</h4>
+          <div class="space-y-2 text-xs text-neutral-500 leading-relaxed">
+            <p><strong class="text-neutral-700">Torre Médica Piantini</strong><br>Av. Abraham Lincoln esq. Gustavo Mejía Ricart, Suite 604</p>
+            <p><strong class="text-neutral-700">Lunes a Viernes:</strong> 8:00 AM – 7:00 PM<br><strong class="text-neutral-700">Sábados:</strong> 9:00 AM – 2:00 PM</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold font-mono tracking-wider text-neutral-900 uppercase mb-4">Contacto Directo</h4>
+          <div class="space-y-3 text-xs text-neutral-500">
+            <p>📞 (809) 555-0199</p>
+            <p>💬 WhatsApp: +1 (809) 555-0199</p>
+            <p>✉️ hola@oralynclinic.com</p>
+            <button onclick="openBookingModal()" class="w-full text-center bg-neutral-900 hover:bg-black text-white font-bold py-2.5 rounded-full transition-colors mt-2">
+              Reservar Turno
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-neutral-100 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
+        <p>© 2026 Oralyn Dental Studios. Todos los derechos reservados.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:underline">Políticas de Privacidad</a>
+          <a href="#" class="hover:underline">Términos de Servicio</a>
+          <a href="#" class="hover:underline">Consentimiento Informado</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: SCHEDULE CONSULTATION ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-neutral-950/60 backdrop-blur-sm transition-opacity">
+    <div class="bg-white rounded-[32px] w-full max-w-lg shadow-2xl border border-neutral-100 overflow-hidden relative transform transition-transform animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Close button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-neutral-900 p-2 rounded-full hover:bg-neutral-100 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="p-8 sm:p-10">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="text-xs font-mono font-bold text-neutral-500">AGENDA TU CITA 3D</span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-neutral-900 tracking-tight">Evaluación y Escaneo Digital</h3>
+        <p class="text-xs text-neutral-500 mt-1">Completa los datos y confirmamos tu espacio de inmediato por WhatsApp.</p>
+
+        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="mt-6 space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Tu Nombre Completo</label>
+            <input type="text" id="patientName" required placeholder="Ej: Marcela Gómez" class="w-full text-sm rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500 py-3 px-4">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Teléfono / WhatsApp</label>
+            <input type="tel" id="patientPhone" required placeholder="Ej: 809-555-1234" class="w-full text-sm rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500 py-3 px-4">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Tratamiento de Interés</label>
+            <select id="patientService" class="w-full text-sm rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500 py-3 px-4">
+              <option value="Alineadores Invisibles (Ortodoncia)">Alineadores Invisibles (Ortodoncia)</option>
+              <option value="Digital Smile Design (3D)">Digital Smile Design (Simulación 3D)</option>
+              <option value="Blanqueamiento Dental Láser">Blanqueamiento Dental Láser Frío</option>
+              <option value="Diseño de Sonrisa en Resina/Porcelana">Carillas / Diseño en Resina</option>
+              <option value="Chequeo General y Limpieza">Evaluación General y Profilaxis</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Fecha Deseada</label>
+              <input type="date" id="patientDate" class="w-full text-xs rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500 py-3 px-3">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Preferencia de Horario</label>
+              <select id="patientTime" class="w-full text-xs rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500 py-3 px-3">
+                <option value="Mañana (9:00 AM - 12:00 PM)">Mañana (9 AM - 12 PM)</option>
+                <option value="Tarde (2:00 PM - 5:00 PM)">Tarde (2 PM - 5 PM)</option>
+                <option value="Vespertino (5:00 PM - 7:00 PM)">Tarde (5 PM - 7 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 active:scale-95 text-white font-bold text-xs py-3.5 rounded-xl shadow-glow transition-all mt-4 flex items-center justify-center gap-2">
+            <span>CONFIRMAR POR WHATSAPP</span>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.391.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"></path></svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: VIDEO PROCESS WALKTHROUGH ==================== -->
+  <div id="videoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-neutral-950/75 backdrop-blur-md">
+    <div class="bg-neutral-900 rounded-[32px] w-full max-w-3xl overflow-hidden shadow-2xl border border-white/10 relative">
+      <button onclick="closeVideoModal()" class="absolute top-5 right-5 text-white/70 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-20">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      
+      <div class="p-8 sm:p-10 text-white">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+          <span class="text-xs font-mono font-bold tracking-widest text-brand-300 uppercase">Clínica Oralyn 3D</span>
+        </div>
+        <h3 class="text-2xl font-bold tracking-tight">Recorrido por nuestro protocolo de alineación</h3>
+        
+        <div class="mt-6 aspect-video bg-neutral-950 rounded-2xl overflow-hidden relative flex items-center justify-center border border-white/5">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL2PKoUH0PvYAbyigi3LXjkprmmpaTZQ6N5s4YJQzADzFp0Az9Lcmguz2jaq-VDnIF-w5HWiPhkTUiIAlm2Thg4hcO6wY_IID2oKI_oEZ_ERLZVYXaoWCvao2sWq4DH8ok42mXftXWrAkDxFZ3Nf3CA8_3rAisrBv1JVSQRVF4Hn34sOY135AbKKdmj83sekoUCnfQWPhcfUASS6vjwEec-eRO9__RGV1b6gsev-Dg4n-IbpluILHE" alt="Consultorio Oralyn" class="w-full h-full object-cover opacity-60">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/80 via-transparent to-black/30">
+            <div class="w-16 h-16 rounded-full bg-brand-500 text-white flex items-center justify-center shadow-glow mb-4 animate-bounce">
+              <svg class="w-7 h-7 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <p class="text-sm font-semibold text-neutral-200">Demostración en Vivo: Escáner iTero Element 5D + Simulación</p>
+            <p class="text-xs text-neutral-400 mt-1">Conoce cómo diseñamos tu sonrisa en alta resolución</p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-xs text-neutral-400">¿Listo para vivir la experiencia en persona?</p>
+          <button onclick="closeVideoModal(); openBookingModal();" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs px-6 py-3 rounded-full shadow-glow transition-all">
+            Agendar Mi Evaluación 3D
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    <div class="hidden sm:flex bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl border border-neutral-100 text-xs font-semibold text-neutral-700 items-center gap-2 animate-pulse">
+      <span class="w-2 h-2 rounded-full bg-green-500"></span>
+      <span>¡Estamos en línea! Escríbenos</span>
+    </div>
+    <a href="https://wa.me/18095550199?text=Hola%20Oralyn!%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20tratamientos." target="_blank" class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105" aria-label="WhatsApp">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.391.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ==================== JAVASCRIPT CONTROLLERS ==================== -->
+  <script>
+    // --- Modals Logic ---
+    function openBookingModal(serviceName = '') {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      if (serviceName) {
+        const select = document.getElementById('patientService');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].text.toLowerCase().includes(serviceName.toLowerCase())) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function openVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modals on clicking backdrop
+    window.addEventListener('click', (e) => {
+      const booking = document.getElementById('bookingModal');
+      const video = document.getElementById('videoModal');
+      if (e.target === booking) closeBookingModal();
+      if (e.target === video) closeVideoModal();
+    });
+
+    // --- Form Booking to WhatsApp ---
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('patientName').value.trim();
+      const phone = document.getElementById('patientPhone').value.trim();
+      const service = document.getElementById('patientService').value;
+      const date = document.getElementById('patientDate').value || 'Fecha a coordinar';
+      const time = document.getElementById('patientTime').value;
+
+      const clinicPhone = '18095550199'; // Número de WhatsApp oficial
+      const msg = `🦷 *NUEVA SOLICITUD DE CITA - ORALYN*\n\n` +
+                  `👤 *Paciente:* ${name}\n` +
+                  `📱 *Teléfono:* ${phone}\n` +
+                  `✨ *Tratamiento:* ${service}\n` +
+                  `📅 *Fecha Deseada:* ${date}\n` +
+                  `⏰ *Horario:* ${time}\n\n` +
+                  `_Enviado desde oralynclinic.com_`;
+
+      const waUrl = `https://wa.me/${clinicPhone}?text=${encodeURIComponent(msg)}`;
+      window.open(waUrl, '_blank');
+      closeBookingModal();
+    }
+
+    // --- Mobile Menu Toggle ---
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // --- FAQ Accordion ---
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const arrow = btn.querySelector('svg');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all
+      document.querySelectorAll('#faqAccordion > div > div').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('#faqAccordion svg').forEach(el => el.classList.remove('rotate-180'));
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        arrow.classList.add('rotate-180');
+      }
+    }
+
+    // --- Before & After Comparison Slider Logic ---
+    const sliderContainer = document.getElementById('comparisonSlider');
+    const beforeWrapper = document.getElementById('beforeImageWrapper');
+    const sliderHandle = document.getElementById('sliderHandle');
+    let isDragging = false;
+
+    function updateSlider(x) {
+      const rect = sliderContainer.getBoundingClientRect();
+      let offsetX = x - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      const percentage = (offsetX / rect.width) * 100;
+
+      beforeWrapper.style.width = `${percentage}%`;
+      sliderHandle.style.left = `${percentage}%`;
+    }
+
+    sliderContainer.addEventListener('mousedown', () => isDragging = true);
+    window.addEventListener('mouseup', () => isDragging = false);
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      updateSlider(e.clientX);
+    });
+
+    // Touch events for mobile
+    sliderContainer.addEventListener('touchstart', () => isDragging = true);
+    window.addEventListener('touchend', () => isDragging = false);
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      updateSlider(e.touches[0].clientX);
+    });
+
+    // Set default date picker to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const dateInput = document.getElementById('patientDate');
+    if (dateInput) {
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+    }
+  </script>
+</body>
+</html>
