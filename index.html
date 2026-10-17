@@ -61,6 +61,15 @@
       -webkit-backdrop-filter: blur(16px);
     }
 
+    /* Header: transparent at top, glass when scrolled */
+    .header-scrolled {
+      background: rgba(255, 255, 255, 0.92) !important;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom-color: rgba(229, 231, 235, 0.8) !important;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+    }
+
     /* ══ Image compare (.cmp) ════════════════════════════════════════ */
     .cmp {
       position: relative;
@@ -187,7 +196,7 @@
 <body class="selection:bg-blue-100 selection:text-blue-700">
 
   <!-- ==================== TOP BAR ==================== -->
-  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full glass border-b border-neutral-100 transition-transform duration-300 ease-in-out">
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full bg-transparent border-b border-transparent transition-all duration-300 ease-in-out">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
       
       <!-- Logo with brand icon -->
@@ -789,22 +798,33 @@
 
   <!-- ==================== SCRIPTS ==================== -->
   <script>
-    // --- SMART HIDE / SHOW TOP BAR ON SCROLL ---
+    // --- SMART HEADER: transparent at top, glass on scroll ---
     let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
     const mainHeader = document.getElementById('mainHeader');
 
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    function updateHeader(scrollY) {
+      // At top: fully transparent, no glass, no border
+      if (scrollY <= 60) {
+        mainHeader.classList.remove('header-scrolled', '-translate-y-full');
+      } else {
+        // Scrolled: add glass backdrop + border
+        mainHeader.classList.add('header-scrolled');
 
-      if (currentScrollY <= 40) {
-        mainHeader.classList.remove('-translate-y-full');
-      } else if (currentScrollY > lastScrollY && currentScrollY > 90) {
-        mainHeader.classList.add('-translate-y-full');
-      } else if (currentScrollY < lastScrollY) {
-        mainHeader.classList.remove('-translate-y-full');
+        // Hide on scroll down, show on scroll up
+        if (scrollY > lastScrollY && scrollY > 120) {
+          mainHeader.classList.add('-translate-y-full');
+        } else if (scrollY < lastScrollY) {
+          mainHeader.classList.remove('-translate-y-full');
+        }
       }
+      lastScrollY = Math.max(0, scrollY);
+    }
 
-      lastScrollY = Math.max(0, currentScrollY);
+    // Run once on load
+    updateHeader(window.pageYOffset || document.documentElement.scrollTop);
+
+    window.addEventListener('scroll', () => {
+      updateHeader(window.pageYOffset || document.documentElement.scrollTop);
     }, { passive: true });
 
     // Modals
