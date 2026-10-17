@@ -229,119 +229,140 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <main id="hero" class="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-16 lg:pb-24">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+  <!-- ==================== HERO SECTION (FULL BLEED LUXURY EDITORIAL) ==================== -->
+  <main id="hero" class="relative w-full overflow-hidden min-h-[620px] sm:min-h-[700px] lg:min-h-[760px] flex items-center bg-white">
+    
+    <!-- Hero Background Macro Image Layer (Odentrics Style) -->
+    <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] xl:w-[60%] pointer-events-none select-none z-0 overflow-hidden">
+      <picture class="w-full h-full block">
+        <source srcset="hero_smile_macro.webp" type="image/webp">
+        <img src="hero_smile_macro.jpg" 
+             alt="Diseño de Sonrisa - Dental Sosa" 
+             class="w-full h-full object-cover object-[78%_center] lg:object-right select-none">
+      </picture>
       
-      <!-- Left Column -->
-      <section class="lg:col-span-6 flex flex-col justify-between py-2 sm:py-4">
-        <div class="space-y-6">
-          
-          <!-- Social Proof -->
-          <div class="flex items-center gap-3.5">
-            <div class="flex -space-x-2 overflow-hidden">
-              <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
-              <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
-              <img alt="Patient avatar" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
-            </div>
-            <div class="leading-tight">
-              <span class="block text-sm font-bold text-neutral-900 leading-none">5k+</span>
-              <span class="text-[11px] font-medium text-neutral-500">Sonrisas Radiantes</span>
-            </div>
-          </div>
+      <!-- Seamless fade into pure white canvas on the left -->
+      <div class="absolute inset-y-0 left-0 w-32 sm:w-56 lg:w-80 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none"></div>
+      
+      <!-- Gentle fade on bottom edge to blend with treatments section -->
+      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+      
+      <!-- Soft mobile readability overlay (only on small screens so text pops) -->
+      <div class="absolute inset-0 bg-white/75 sm:bg-white/45 lg:hidden pointer-events-none"></div>
+    </div>
 
-          <!-- Main Headline -->
-          <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] pt-2">
-            Clínica Dental<br>
-            & Estética,<br>
-            <span class="inline-flex items-center gap-3 sm:gap-4">
-              <span class="inline-flex items-center text-neutral-400">
-                <svg class="w-16 sm:w-28 h-7 text-neutral-400 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 120 24">
-                  <line x1="2" x2="114" y1="12" y2="12"></line>
-                  <polyline points="106 5 115 12 106 19"></polyline>
-                </svg>
-              </span>
-              <span>Avanzada.</span>
-            </span>
-          </h1>
-
-          <!-- Simple, punchy CTA & Subtitle -->
-          <div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
-            <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
-              <span>AGENDAR VALORACIÓN</span>
-              <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-            <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-500 max-w-[240px]">
-              Odontología integral y diseño de sonrisa con tecnología digital de última generación.
-            </p>
-          </div>
-        </div>
-
-        <!-- 2 Simple Feature Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 sm:pt-14">
-          <div class="card-gradient rounded-3xl p-6 border border-white/80 shadow-soft flex flex-col justify-between h-[160px]">
-            <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-              <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-bold text-neutral-900 text-sm mb-1">Diseño de Sonrisa</h3>
-              <p class="text-[11px] leading-normal text-neutral-500">
-                Planificación digital personalizada a la armonía de tu rostro.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-gradient rounded-3xl p-6 border border-white/80 shadow-soft flex flex-col justify-between h-[160px]">
-            <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-              <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-bold text-neutral-900 text-sm mb-1">Estética Dental</h3>
-              <p class="text-[11px] leading-normal text-neutral-500">
-                Carillas, blanqueamiento láser y alineación sin dolor.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Right Column: Seamless Macro Dental Smile (Odentrics Style) -->
-      <section class="lg:col-span-6 relative flex items-center justify-center lg:justify-end min-h-[380px] sm:min-h-[480px] lg:min-h-[560px]">
+    <!-- Foreground Content Layer -->
+    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-16 lg:pb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Soft Ambient Glow (No harsh concentric rings) -->
-        <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[280px] sm:w-[440px] lg:w-[520px] h-[280px] sm:h-[440px] lg:h-[520px] rounded-full bg-blue-50/40 blur-3xl pointer-events-none -z-10"></div>
+        <!-- Left Column: Content (takes 7 columns on desktop) -->
+        <section class="lg:col-span-7 xl:col-span-6 flex flex-col justify-between py-2 sm:py-4">
+          <div class="space-y-6">
+            
+            <!-- Category Chip & Social Proof -->
+            <div class="flex flex-wrap items-center gap-3.5">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-[11px] font-bold tracking-wider uppercase">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+                ESTÉTICA DENTAL & ALINEACIÓN
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="flex -space-x-2 overflow-hidden">
+                  <img alt="Patient avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
+                  <img alt="Patient avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
+                  <img alt="Patient avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
+                </div>
+                <div class="leading-tight">
+                  <span class="text-xs font-bold text-neutral-900">5k+</span>
+                  <span class="text-[11px] font-medium text-neutral-500 ml-1">Sonrisas</span>
+                </div>
+              </div>
+            </div>
 
-        <!-- Elegant Sparkle Stars (✦) matching luxury reference -->
-        <div class="absolute top-4 left-6 sm:left-12 z-20 pointer-events-none select-none text-neutral-300 animate-pulse">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
-        </div>
-        <div class="absolute top-10 right-8 sm:right-16 z-20 pointer-events-none select-none text-neutral-300">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
-        </div>
-        <div class="absolute bottom-8 left-8 sm:left-16 z-20 pointer-events-none select-none text-neutral-300 animate-pulse">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
-        </div>
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] pt-1">
+              Clínica Dental<br>
+              & Estética,<br>
+              <span class="inline-flex items-center gap-3 sm:gap-4">
+                <span class="inline-flex items-center text-neutral-400">
+                  <svg class="w-16 sm:w-28 h-7 text-neutral-400 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 120 24">
+                    <line x1="2" x2="114" y1="12" y2="12"></line>
+                    <polyline points="106 5 115 12 106 19"></polyline>
+                  </svg>
+                </span>
+                <span>Avanzada.</span>
+              </span>
+            </h1>
 
-        <!-- Decorative Floating Tooth Sticker -->
-        <div class="absolute top-1 sm:top-4 right-2 sm:right-6 z-20 pointer-events-none select-none float-tooth">
-          <img src="tooth.png" alt="Diente decorativo 3D" class="w-9 sm:w-14 lg:w-16 h-auto drop-shadow-xl">
-        </div>
+            <!-- Simple, punchy CTA & Subtitle -->
+            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
+              <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
+                <span>AGENDAR VALORACIÓN</span>
+                <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-500 max-w-[240px]">
+                Odontología integral y diseño de sonrisa con tecnología digital de última generación.
+              </p>
+            </div>
+          </div>
 
-        <!-- Seamless Macro Close-up Smile (Left and bottom naturally feathered) -->
-        <picture class="relative z-10 w-full flex justify-center lg:justify-end">
-          <source srcset="hero_smile_macro.webp" type="image/webp">
-          <img src="hero_smile_macro.png" 
-               alt="Sonrisa radiante - Dental Sosa Clínica Dental & Estética" 
-               class="w-full max-w-[440px] sm:max-w-[560px] lg:max-w-none h-auto object-contain lg:object-cover object-right select-none transition-transform duration-700 hover:scale-[1.01]">
-        </picture>
-      </section>
+          <!-- 2 Simple Feature Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 sm:pt-12">
+            <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-neutral-900 text-sm mb-0.5">Diseño de Sonrisa</h3>
+                <p class="text-[11px] leading-normal text-neutral-500">
+                  Planificación digital personalizada a la armonía de tu rostro.
+                </p>
+              </div>
+            </div>
 
+            <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-neutral-900 text-sm mb-0.5">Estética Dental</h3>
+                <p class="text-[11px] leading-normal text-neutral-500">
+                  Carillas, blanqueamiento láser y alineación sin dolor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Column: Open canvas where the giant background smile shines through -->
+        <section class="relative lg:col-span-5 xl:col-span-6 h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] pointer-events-none select-none flex items-center justify-end">
+          
+          <!-- Decorative Floating Tooth Sticker -->
+          <div class="absolute top-2 sm:top-6 right-2 sm:right-8 z-20 pointer-events-none select-none float-tooth">
+            <img src="tooth.png" alt="Diente decorativo 3D" class="w-10 sm:w-16 lg:w-20 h-auto drop-shadow-xl">
+          </div>
+
+          <!-- Elegant Sparkle Stars (✦) matching luxury reference -->
+          <div class="absolute top-10 left-2 sm:left-8 z-20 pointer-events-none select-none text-neutral-400/80 animate-pulse">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
+          </div>
+          <div class="absolute bottom-16 left-8 sm:left-16 z-20 pointer-events-none select-none text-neutral-400/70 animate-pulse">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
+          </div>
+          <div class="absolute top-24 right-20 sm:right-28 z-20 pointer-events-none select-none text-neutral-300">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
+          </div>
+          <div class="absolute bottom-28 right-8 z-20 pointer-events-none select-none text-neutral-400/60">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
+          </div>
+        </section>
+
+      </div>
     </div>
   </main>
 
