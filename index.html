@@ -257,24 +257,18 @@
         
         <!-- Left Column: Content (takes 7 columns on desktop) -->
         <section class="lg:col-span-7 xl:col-span-6 flex flex-col justify-between py-2 sm:py-4">
-          <div class="space-y-6">
+          <div class="space-y-6 sm:space-y-7">
             
-            <!-- Category Chip & Social Proof -->
-            <div class="flex flex-wrap items-center gap-3.5">
-              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-[11px] font-bold tracking-wider uppercase">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
-                ESTÉTICA DENTAL & ALINEACIÓN
+            <!-- Social Proof -->
+            <div class="flex items-center gap-3.5">
+              <div class="flex -space-x-2 overflow-hidden">
+                <img alt="Paciente Dental Sosa" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Dental Sosa" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Dental Sosa" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
               </div>
-              <div class="flex items-center gap-2">
-                <div class="flex -space-x-2 overflow-hidden">
-                  <img alt="Patient avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
-                  <img alt="Patient avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
-                  <img alt="Patient avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
-                </div>
-                <div class="leading-tight">
-                  <span class="text-xs font-bold text-neutral-900">5k+</span>
-                  <span class="text-[11px] font-medium text-neutral-500 ml-1">Sonrisas</span>
-                </div>
+              <div class="leading-tight">
+                <span class="block text-sm font-bold text-neutral-900 leading-none">5k+</span>
+                <span class="text-[11px] font-medium text-neutral-500">Sonrisas Radiantes</span>
               </div>
             </div>
 
@@ -294,21 +288,21 @@
             </h1>
 
             <!-- Simple, punchy CTA & Subtitle -->
-            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
+            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
                 <span>AGENDAR VALORACIÓN</span>
                 <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </button>
-              <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-500 max-w-[240px]">
+              <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-500 max-w-[260px]">
                 Odontología integral y diseño de sonrisa con tecnología digital de última generación.
               </p>
             </div>
           </div>
 
           <!-- 2 Simple Feature Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 sm:pt-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8 sm:pt-10 max-w-[580px]">
             <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
               <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
                 <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
@@ -339,25 +333,14 @@
           </div>
         </section>
 
-        <!-- Right Column: Open canvas where the giant background smile shines through -->
-        <section class="relative lg:col-span-5 xl:col-span-6 h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] pointer-events-none select-none flex items-center justify-end">
+        <!-- Right Column: Open canvas where the giant background smile shines through unobstructed -->
+        <section class="relative hidden lg:flex lg:col-span-5 xl:col-span-6 h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] pointer-events-none select-none flex items-center justify-end">
           
-          <!-- Decorative Floating Tooth Sticker -->
-          <div class="absolute top-2 sm:top-6 right-2 sm:right-8 z-20 pointer-events-none select-none float-tooth">
-            <img src="tooth.png" alt="Diente decorativo 3D" class="w-10 sm:w-16 lg:w-20 h-auto drop-shadow-xl">
-          </div>
-
-          <!-- Elegant Sparkle Stars (✦) matching luxury reference -->
-          <div class="absolute top-10 left-2 sm:left-8 z-20 pointer-events-none select-none text-neutral-400/80 animate-pulse">
+          <!-- Elegant Sparkle Stars (✦) positioned gently in the transition zone, not over the face -->
+          <div class="absolute top-12 left-0 sm:left-4 z-20 pointer-events-none select-none text-neutral-300 animate-pulse">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
           </div>
-          <div class="absolute bottom-16 left-8 sm:left-16 z-20 pointer-events-none select-none text-neutral-400/70 animate-pulse">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
-          </div>
-          <div class="absolute top-24 right-20 sm:right-28 z-20 pointer-events-none select-none text-neutral-300">
-            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
-          </div>
-          <div class="absolute bottom-28 right-8 z-20 pointer-events-none select-none text-neutral-400/60">
+          <div class="absolute bottom-16 left-6 sm:left-12 z-20 pointer-events-none select-none text-neutral-300/80 animate-pulse">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
           </div>
         </section>
