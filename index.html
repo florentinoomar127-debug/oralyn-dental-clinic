@@ -241,20 +241,20 @@
   <!-- ==================== HERO SECTION (FULL BLEED LUXURY EDITORIAL) ==================== -->
   <main id="hero" class="relative w-full overflow-hidden min-h-[620px] sm:min-h-[700px] lg:min-h-[760px] flex items-center bg-white">
     
-    <!-- Hero Background Macro Image Layer (For Tablet & PC - seamless background) -->
-    <div class="absolute inset-y-0 right-0 w-full sm:w-[50%] md:w-[52%] lg:w-[56%] xl:w-[60%] pointer-events-none select-none z-0 overflow-hidden hidden sm:block">
+    <!-- Hero Background Macro Image Layer (Seamless background across Mobile, Tablet & PC) -->
+    <div class="absolute top-0 right-0 h-[440px] sm:h-full w-full sm:w-[50%] md:w-[52%] lg:w-[56%] xl:w-[60%] pointer-events-none select-none z-0 overflow-hidden block">
       <picture class="w-full h-full block">
         <source srcset="hero_smile_macro.webp" type="image/webp">
         <img src="hero_smile_macro.jpg" 
              alt="Diseño de Sonrisa - Dental Sosa" 
-             class="w-full h-full object-cover object-right select-none">
+             class="w-full h-full object-cover object-[84%_25%] sm:object-right select-none">
       </picture>
       
       <!-- Seamless fade into pure white canvas on the left -->
-      <div class="absolute inset-y-0 left-0 w-36 sm:w-48 md:w-56 lg:w-72 xl:w-80 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-y-0 left-0 w-44 sm:w-48 md:w-56 lg:w-72 xl:w-80 bg-gradient-to-r from-white via-white/85 sm:via-white/80 to-transparent pointer-events-none"></div>
       
-      <!-- Gentle fade on bottom edge to blend with treatments section -->
-      <div class="absolute inset-x-0 bottom-0 h-20 sm:h-28 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+      <!-- Gentle fade on bottom edge to blend seamlessly -->
+      <div class="absolute inset-x-0 bottom-0 h-28 sm:h-28 bg-gradient-to-t from-white via-white/90 sm:via-white/80 to-transparent pointer-events-none"></div>
     </div>
 
     <!-- Foreground Content Layer -->
@@ -307,20 +307,6 @@
             </div>
           </div>
 
-          <!-- Mobile Hero Smile Showcase (Razor-sharp & vivid on phones, hidden on tablet & PC) -->
-          <div class="relative w-full rounded-3xl overflow-hidden shadow-soft border border-neutral-100 my-5 sm:hidden">
-            <picture class="block w-full">
-              <source srcset="hero_smile_macro.webp" type="image/webp">
-              <img src="hero_smile_macro.jpg" alt="Diseño de Sonrisa - Dental Sosa" class="w-full h-[220px] object-cover object-[80%_center]">
-            </picture>
-            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-2 rounded-2xl glass border border-white/70 shadow-sm">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-[10px] font-bold text-neutral-800 tracking-wide uppercase">Estética Dental Avanzada</span>
-              </div>
-              <span class="text-[10px] font-semibold text-neutral-500">100% Digital</span>
-            </div>
-          </div>
 
           <!-- 2 Simple Feature Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-4 sm:pt-8 md:pt-10 max-w-[580px]">
