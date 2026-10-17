@@ -239,41 +239,41 @@
   </header>
 
   <!-- ==================== HERO SECTION (FULL BLEED LUXURY EDITORIAL) ==================== -->
-  <main id="hero" class="relative w-full overflow-hidden min-h-[620px] sm:min-h-[700px] lg:min-h-[760px] flex items-center bg-white">
+  <main id="hero" class="relative w-full overflow-hidden bg-white">
     
-    <!-- Hero Background Macro Image Layer (Odentrics Style) -->
-    <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] xl:w-[60%] pointer-events-none select-none z-0 overflow-hidden">
-      <picture class="w-full h-full block">
+    <!-- Hero Background Macro Image Layer — hidden on mobile, visible tablet+ -->
+    <div class="absolute inset-0 pointer-events-none select-none z-0 hidden sm:block overflow-hidden">
+      <picture class="absolute inset-y-0 right-0 w-full sm:w-[70%] md:w-[65%] lg:w-[60%] xl:w-[58%] h-full block">
         <source srcset="hero_smile_macro.webp" type="image/webp">
         <img src="hero_smile_macro.jpg" 
              alt="Diseño de Sonrisa - Dental Sosa" 
-             class="w-full h-full object-cover object-[78%_center] lg:object-right select-none">
+             class="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] lg:object-right select-none">
       </picture>
       
       <!-- Seamless fade into pure white canvas on the left -->
-      <div class="absolute inset-y-0 left-0 w-32 sm:w-56 lg:w-80 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-y-0 left-0 w-[45%] sm:w-[50%] md:w-[45%] lg:w-[48%] bg-gradient-to-r from-white via-white to-white/0 pointer-events-none"></div>
       
-      <!-- Gentle fade on bottom edge to blend with treatments section -->
-      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+      <!-- Gentle fade on bottom edge -->
+      <div class="absolute inset-x-0 bottom-0 h-24 sm:h-28 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
       
-      <!-- Soft mobile readability overlay (only on small screens so text pops) -->
-      <div class="absolute inset-0 bg-white/75 sm:bg-white/45 lg:hidden pointer-events-none"></div>
+      <!-- Readability overlay for tablets -->
+      <div class="absolute inset-0 bg-white/30 sm:bg-white/20 md:bg-transparent pointer-events-none"></div>
     </div>
 
     <!-- Foreground Content Layer -->
-    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-16 lg:pb-20">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-14 lg:pb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
         
-        <!-- Left Column: Content (takes 7 columns on desktop) -->
-        <section class="lg:col-span-7 xl:col-span-6 flex flex-col justify-between py-2 sm:py-4">
-          <div class="space-y-6 sm:space-y-7">
+        <!-- Left Column: Content -->
+        <section class="lg:col-span-7 xl:col-span-6 flex flex-col justify-center py-2 sm:py-4">
+          <div class="space-y-5 sm:space-y-6">
             
             <!-- Social Proof -->
-            <div class="flex items-center gap-3.5">
+            <div class="flex items-center gap-3">
               <div class="flex -space-x-2 overflow-hidden">
-                <img alt="Paciente Dental Sosa" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
-                <img alt="Paciente Dental Sosa" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
-                <img alt="Paciente Dental Sosa" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Dental Sosa" class="inline-block h-7 w-7 sm:h-8 sm:w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Dental Sosa" class="inline-block h-7 w-7 sm:h-8 sm:w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Dental Sosa" class="inline-block h-7 w-7 sm:h-8 sm:w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
               </div>
               <div class="leading-tight">
                 <span class="block text-sm font-bold text-neutral-900 leading-none">5k+</span>
@@ -282,12 +282,12 @@
             </div>
 
             <!-- Main Headline -->
-            <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] pt-1">
+            <h1 class="text-[32px] sm:text-5xl lg:text-[62px] font-extrabold text-neutral-900 tracking-tight leading-[1.1] sm:leading-[1.08]">
               Clínica Dental<br>
               & Estética,<br>
-              <span class="inline-flex items-center gap-3 sm:gap-4">
+              <span class="inline-flex items-center gap-2 sm:gap-4">
                 <span class="inline-flex items-center text-neutral-400">
-                  <svg class="w-16 sm:w-28 h-7 text-neutral-400 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 120 24">
+                  <svg class="w-12 sm:w-28 h-6 sm:h-7 text-neutral-400 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 120 24">
                     <line x1="2" x2="114" y1="12" y2="12"></line>
                     <polyline points="106 5 115 12 106 19"></polyline>
                   </svg>
@@ -296,9 +296,9 @@
               </span>
             </h1>
 
-            <!-- Simple, punchy CTA & Subtitle -->
-            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-              <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
+            <!-- CTA & Subtitle -->
+            <div class="pt-1 sm:pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+              <button onclick="openBookingModal()" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3 sm:py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
                 <span>AGENDAR VALORACIÓN</span>
                 <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -310,50 +310,62 @@
             </div>
           </div>
 
-          <!-- 2 Simple Feature Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8 sm:pt-10 max-w-[580px]">
-            <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
-              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
+          <!-- 2 Feature Cards -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 pt-7 sm:pt-10 max-w-[580px]">
+            <div class="card-gradient rounded-2xl sm:rounded-3xl p-4 sm:p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[130px] sm:h-[150px]">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold text-neutral-900 text-sm mb-0.5">Diseño de Sonrisa</h3>
-                <p class="text-[11px] leading-normal text-neutral-500">
-                  Planificación digital personalizada a la armonía de tu rostro.
+                <h3 class="font-bold text-neutral-900 text-xs sm:text-sm mb-0.5">Diseño de Sonrisa</h3>
+                <p class="text-[10px] sm:text-[11px] leading-normal text-neutral-500">
+                  Planificación digital personalizada.
                 </p>
               </div>
             </div>
 
-            <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
-              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
+            <div class="card-gradient rounded-2xl sm:rounded-3xl p-4 sm:p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[130px] sm:h-[150px]">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold text-neutral-900 text-sm mb-0.5">Estética Dental</h3>
-                <p class="text-[11px] leading-normal text-neutral-500">
-                  Carillas, blanqueamiento láser y alineación sin dolor.
+                <h3 class="font-bold text-neutral-900 text-xs sm:text-sm mb-0.5">Estética Dental</h3>
+                <p class="text-[10px] sm:text-[11px] leading-normal text-neutral-500">
+                  Carillas, blanqueamiento y más.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Right Column: Open canvas where the giant background smile shines through unobstructed -->
-        <section class="relative hidden lg:flex lg:col-span-5 xl:col-span-6 h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] pointer-events-none select-none flex items-center justify-end">
-          
-          <!-- Elegant Sparkle Stars (✦) positioned gently in the transition zone, not over the face -->
-          <div class="absolute top-12 left-0 sm:left-4 z-20 pointer-events-none select-none text-neutral-300 animate-pulse">
+        <!-- Right Column: spacer for desktop background to show through -->
+        <section class="relative hidden lg:flex lg:col-span-5 xl:col-span-6 min-h-[520px] pointer-events-none select-none items-center justify-end">
+          <!-- Sparkle Stars -->
+          <div class="absolute top-12 left-4 z-20 pointer-events-none select-none text-neutral-300 animate-pulse">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
           </div>
-          <div class="absolute bottom-16 left-6 sm:left-12 z-20 pointer-events-none select-none text-neutral-300/80 animate-pulse">
+          <div class="absolute bottom-16 left-12 z-20 pointer-events-none select-none text-neutral-300/80 animate-pulse">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
           </div>
         </section>
 
+      </div>
+    </div>
+
+    <!-- Mobile Hero Image (below content, visible only on mobile) -->
+    <div class="sm:hidden w-full -mt-4 relative overflow-hidden">
+      <div class="relative">
+        <picture class="block w-full">
+          <source srcset="hero_smile_macro.webp" type="image/webp">
+          <img src="hero_smile_macro.jpg" 
+               alt="Sonrisa radiante - Dental Sosa" 
+               class="w-full h-auto object-cover select-none"
+               style="-webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); mask-image: linear-gradient(to bottom, black 70%, transparent 100%);">
+        </picture>
       </div>
     </div>
   </main>
