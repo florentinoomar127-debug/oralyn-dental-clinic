@@ -21,15 +21,18 @@
           },
           colors: {
             brand: {
-              blue: '#1967d2',
-              accent: '#0d6efd',
-              sky: '#dbeefd',
-              lightBlue: '#eef6fc',
+              pink: '#db2188',
+              accent: '#db2188',
+              pinkHover: '#be185d',
+              pinkLight: '#fdf2f8',
+              pinkBorder: '#fbcfe8',
+              magenta: '#db2188',
               dark: '#111827',
+              gray: '#969593',
             }
           },
           boxShadow: {
-            'glow': '0 10px 25px -3px rgba(25, 103, 210, 0.45)',
+            'glow': '0 10px 25px -3px rgba(219, 33, 136, 0.45)',
             'soft': '0 12px 30px -4px rgba(0, 0, 0, 0.04)',
             'card': '0 2px 10px rgba(0, 0, 0, 0.03)',
           }
@@ -52,7 +55,7 @@
     }
 
     .card-gradient {
-      background: linear-gradient(145deg, #f8fafd 0%, #edf3f9 100%);
+      background: linear-gradient(145deg, #fdfafc 0%, #faedf5 100%);
     }
 
     .glass {
@@ -90,7 +93,7 @@
       background: #222;
     }
 
-    .cmp:focus-visible { box-shadow: 0 0 0 2px var(--signal, #2231dd); }
+    .cmp:focus-visible { box-shadow: 0 0 0 2px var(--signal, #db2188); }
 
     .cmp-img {
       position: absolute;
@@ -131,7 +134,7 @@
     .cmp-tag.cmp-right {
       left: auto;
       right: 14px;
-      background: rgba(25, 103, 210, 0.75);
+      background: rgba(219, 33, 136, 0.85);
     }
 
     /* the line is drawn, so it can bend: a 2px white curve with a
@@ -201,7 +204,7 @@
     }
   </style>
 </head>
-<body class="selection:bg-blue-100 selection:text-blue-700">
+<body class="selection:bg-pink-100 selection:text-pink-800">
 
   <!-- ==================== TOP BAR ==================== -->
   <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full bg-transparent border-b border-transparent transition-all duration-300 ease-in-out">
@@ -238,10 +241,10 @@
     <!-- Mobile Navigation Dropdown -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md">
       <nav class="flex flex-col px-6 py-4 space-y-3 text-sm font-semibold text-neutral-700">
-        <a href="#hero" class="hover:text-blue-600 transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">INICIO</a>
-        <a href="#treatments" class="hover:text-blue-600 transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">TRATAMIENTOS</a>
-        <a href="#results" class="hover:text-blue-600 transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">RESULTADOS</a>
-        <a href="#faq" class="hover:text-blue-600 transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">FAQ</a>
+        <a href="#hero" class="hover:text-[#db2188] transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">INICIO</a>
+        <a href="#treatments" class="hover:text-[#db2188] transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">TRATAMIENTOS</a>
+        <a href="#results" class="hover:text-[#db2188] transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">RESULTADOS</a>
+        <a href="#faq" class="hover:text-[#db2188] transition-colors" onclick="document.getElementById('mobileMenu').classList.add('hidden')">FAQ</a>
       </nav>
     </div>
   </header>
@@ -303,7 +306,7 @@
 
             <!-- Simple, punchy CTA & Subtitle -->
             <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-6">
-              <button onclick="openBookingModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
+              <button onclick="openBookingModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#db2188] hover:bg-[#be185d] active:scale-95 text-white font-semibold text-xs sm:text-[13px] px-6 py-3.5 rounded-full shadow-glow transition-all duration-200 tracking-wider">
                 <span>AGENDAR VALORACIÓN</span>
                 <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -320,7 +323,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-4 sm:pt-8 md:pt-10 max-w-[580px]">
             <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
               <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 text-[#db2188] fill-current" viewBox="0 0 24 24">
                   <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
                 </svg>
               </div>
@@ -334,7 +337,7 @@
 
             <div class="card-gradient rounded-3xl p-5 border border-white/80 shadow-soft flex flex-col justify-between h-[150px]">
               <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <svg class="w-4 h-4 text-blue-600 fill-current" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 text-[#db2188] fill-current" viewBox="0 0 24 24">
                   <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
                 </svg>
               </div>
@@ -381,7 +384,7 @@
       <div id="treatmentsTrack" class="flex gap-5 sm:gap-6 overflow-x-auto pb-4 pt-2 -mx-6 px-6 sm:-mx-10 sm:px-10 lg:-mx-16 lg:px-16 scroll-smooth snap-x snap-mandatory no-scrollbar">
         
         <!-- 1. Caries -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Tratamiento de Caries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -392,14 +395,14 @@
               Eliminación de caries y restauración dental con resinas de alta estética para devolver la salud y forma natural de tus dientes.
             </p>
           </div>
-          <button onclick="openBookingModal('Caries')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Caries')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Consultar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 2. Profilaxis -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Profilaxis y Limpieza Dental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -410,14 +413,14 @@
               Limpieza dental profesional profunda para eliminar placa, sarro y manchas, manteniendo tus dientes sanos y brillantes.
             </p>
           </div>
-          <button onclick="openBookingModal('Profilaxis')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Profilaxis')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Agendar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 3. Periodoncia -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Periodoncia y Cuidado de Encías" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -428,14 +431,14 @@
               Tratamiento de encías inflamadas, sangrado y retracción gingival para asegurar la firmeza y soporte de tus dientes.
             </p>
           </div>
-          <button onclick="openBookingModal('Periodoncia')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Periodoncia')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Consultar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 4. Prótesis -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Prótesis Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -446,14 +449,14 @@
               Prótesis fijas y removibles de alta calidad para recuperar tu capacidad masticatoria y la estética de tu sonrisa.
             </p>
           </div>
-          <button onclick="openBookingModal('Prótesis')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Prótesis')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Cotizar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 5. Cirugías -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Cirugías Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -464,14 +467,14 @@
               Extracciones, cordales y procedimientos quirúrgicos seguros con anestesia local para una recuperación cómoda y efectiva.
             </p>
           </div>
-          <button onclick="openBookingModal('Cirugías')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Cirugías')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Consultar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 6. Carillas -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Carillas Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -482,50 +485,50 @@
               Láminas ultrafinas de porcelana o resina para corregir color, forma y espacio, logrando una sonrisa armónica y radiante.
             </p>
           </div>
-          <button onclick="openBookingModal('Carillas')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Carillas')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Cotizar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 7. Coronas -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Coronas Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <span class="text-[11px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full tracking-wider">RESTAURACIÓN</span>
+            <span class="text-[11px] font-bold text-pink-600 bg-pink-50 px-3 py-1 rounded-full tracking-wider">RESTAURACIÓN</span>
             <h3 class="text-lg font-bold text-neutral-900 mt-3">Coronas</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
               Coronas de porcelana que protegen y restauran dientes debilitados con un acabado natural y duradero.
             </p>
           </div>
-          <button onclick="openBookingModal('Coronas')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Coronas')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Cotizar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 8. Blanqueamiento -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80" alt="Blanqueamiento Dental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <span class="text-[11px] font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full tracking-wider">ESTÉTICA</span>
+            <span class="text-[11px] font-bold text-fuchsia-600 bg-fuchsia-50 px-3 py-1 rounded-full tracking-wider">ESTÉTICA</span>
             <h3 class="text-lg font-bold text-neutral-900 mt-3">Blanqueamiento</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
               Aclaramiento dental profesional con tecnología LED para dientes visiblemente más blancos en una sola sesión.
             </p>
           </div>
-          <button onclick="openBookingModal('Blanqueamiento')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Blanqueamiento')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Consultar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 9. Retenedores -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=80" alt="Retenedores Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -536,14 +539,14 @@
               Retenedores fijos y removibles para mantener la posición ideal y estabilidad de tus dientes.
             </p>
           </div>
-          <button onclick="openBookingModal('Retenedores')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Retenedores')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Consultar</span>
             <span>→</span>
           </button>
         </div>
 
         <!-- 10. Quita Hábitos -->
-        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-pink-300 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
               <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=800&q=80" alt="Aparatos Quita Hábitos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -554,7 +557,7 @@
               Aparatología especializada para corregir hábitos como succión digital y deglución atípica en niños de forma segura.
             </p>
           </div>
-          <button onclick="openBookingModal('Quita Hábitos')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Quita Hábitos')" class="mt-6 text-xs font-bold text-[#db2188] hover:text-[#be185d] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Consultar</span>
             <span>→</span>
           </button>
@@ -630,13 +633,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
         <!-- Connecting line (desktop only) -->
-        <div class="hidden md:block absolute top-10 left-[16.6%] right-[16.6%] h-px border-t-2 border-dashed border-blue-200 pointer-events-none"></div>
+        <div class="hidden md:block absolute top-10 left-[16.6%] right-[16.6%] h-px border-t-2 border-dashed border-pink-200 pointer-events-none"></div>
 
         <div class="relative bg-white rounded-3xl p-7 border border-neutral-200/60 shadow-card text-center hover:shadow-soft transition-shadow duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-5 ring-4 ring-white relative z-10">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="w-14 h-14 rounded-2xl bg-pink-50 flex items-center justify-center mx-auto mb-5 ring-4 ring-white relative z-10">
+            <svg class="w-6 h-6 text-[#db2188]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <span class="text-[11px] font-bold text-blue-600 tracking-widest">PASO 01</span>
+          <span class="text-[11px] font-bold text-[#db2188] tracking-widest">PASO 01</span>
           <h3 class="text-base font-bold text-neutral-900 mt-1.5">Diagnóstico Clínico</h3>
           <p class="text-xs text-neutral-500 mt-2 leading-relaxed">Evaluación clínica detallada en tu primera visita.</p>
         </div>
@@ -790,12 +793,12 @@
     </div>
   </section>
 
-  <!-- ==================== ROYAL BLUE FOOTER & CTA (FLOATING CAPSULE CARD) ==================== -->
+  <!-- ==================== LUXURY FOOTER & CTA (FLOATING CAPSULE CARD) ==================== -->
   <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 pb-10 sm:pb-14 mt-16 sm:mt-20">
-    <footer class="relative bg-[#2b66ff] text-white rounded-[20px] sm:rounded-[32px] lg:rounded-[44px] border border-blue-400/35 shadow-2xl pt-12 sm:pt-16 pb-10 overflow-hidden">
+    <footer class="relative bg-neutral-900 text-white rounded-[20px] sm:rounded-[32px] lg:rounded-[44px] border border-neutral-800 shadow-2xl pt-12 sm:pt-16 pb-10 overflow-hidden">
     
     <!-- Giant Subtle Watermark (like reference image) -->
-    <div class="absolute -bottom-4 sm:-bottom-8 left-1/2 -translate-x-1/2 pointer-events-none select-none text-[85px] sm:text-[140px] lg:text-[190px] font-black tracking-tight text-white/[0.06] whitespace-nowrap leading-none z-0">
+    <div class="absolute -bottom-4 sm:-bottom-8 left-1/2 -translate-x-1/2 pointer-events-none select-none text-[85px] sm:text-[140px] lg:text-[190px] font-black tracking-tight text-white/[0.04] whitespace-nowrap leading-none z-0">
       Dental Sosa
     </div>
 
@@ -819,7 +822,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full lg:w-auto">
-          <button onclick="openBookingModal()" class="w-full sm:w-auto text-center bg-[#0cc4ff] hover:bg-[#00b8f5] active:scale-95 text-neutral-900 font-bold text-xs sm:text-[13px] px-7 py-3.5 rounded-full transition-all shadow-md">
+          <button onclick="openBookingModal()" class="w-full sm:w-auto text-center bg-[#db2188] hover:bg-[#be185d] active:scale-95 text-white font-bold text-xs sm:text-[13px] px-7 py-3.5 rounded-full transition-all shadow-glow">
             Agendar Cita
           </button>
           <a href="#treatments" class="w-full sm:w-auto text-center border border-white/80 hover:bg-white/10 active:scale-95 text-white font-medium text-xs sm:text-[13px] px-7 py-3.5 rounded-full transition-all">
@@ -913,17 +916,17 @@
       <form onsubmit="handleBookingSubmit(event)" class="mt-5 space-y-3">
         <div>
           <label class="block text-[11px] font-bold text-neutral-600 uppercase mb-1">Nombre</label>
-          <input type="text" id="patientName" required placeholder="Tu nombre" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-blue-600 focus:border-blue-600">
+          <input type="text" id="patientName" required placeholder="Tu nombre" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-[#db2188] focus:border-[#db2188]">
         </div>
 
         <div>
           <label class="block text-[11px] font-bold text-neutral-600 uppercase mb-1">WhatsApp</label>
-          <input type="tel" id="patientPhone" required placeholder="Tu teléfono" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-blue-600 focus:border-blue-600">
+          <input type="tel" id="patientPhone" required placeholder="Tu teléfono" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-[#db2188] focus:border-[#db2188]">
         </div>
 
         <div>
           <label class="block text-[11px] font-bold text-neutral-600 uppercase mb-1">Tratamiento</label>
-          <select id="patientService" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-blue-600 focus:border-blue-600">
+          <select id="patientService" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-[#db2188] focus:border-[#db2188]">
             <option>Caries</option>
             <option>Profilaxis</option>
             <option>Periodoncia</option>
@@ -937,7 +940,7 @@
           </select>
         </div>
 
-        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-xs py-3 rounded-xl shadow-glow transition-all mt-4">
+        <button type="submit" class="w-full bg-[#db2188] hover:bg-[#be185d] active:scale-95 text-white font-bold text-xs py-3 rounded-xl shadow-glow transition-all mt-4">
           CONFIRMAR POR WHATSAPP
         </button>
       </form>
