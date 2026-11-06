@@ -61,6 +61,14 @@
       -webkit-backdrop-filter: blur(16px);
     }
 
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     /* Header: transparent at top, glass when scrolled */
     .header-scrolled {
       background: rgba(255, 255, 255, 0.92) !important;
@@ -356,7 +364,7 @@
     </div>
   </main>
 
-  <!-- ==================== TREATMENTS (CLEAN & SIMPLE) ==================== -->
+  <!-- ==================== TREATMENTS (MODERN SNAP SLIDER) ==================== -->
   <section id="treatments" class="py-16 sm:py-24 border-t border-neutral-100">
     <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
       
@@ -369,62 +377,199 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 10-Card Full-Size Slider Track -->
+      <div id="treatmentsTrack" class="flex gap-5 sm:gap-6 overflow-x-auto pb-4 pt-2 -mx-6 px-6 sm:-mx-10 sm:px-10 lg:-mx-16 lg:px-16 scroll-smooth snap-x snap-mandatory no-scrollbar">
         
-        <!-- 1. Smile Design / Veneers -->
-        <div class="group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <!-- 1. Caries -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
-              <img src="braces.jpg" alt="Diseño de Sonrisa y Carillas Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Tratamiento de Caries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full tracking-wider">ESTÉTICA DENTAL</span>
-            <h3 class="text-lg font-bold text-neutral-900 mt-3">Diseño de Sonrisa & Carillas</h3>
+            <span class="text-[11px] font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full tracking-wider">RESTAURACIÓN</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Caries</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
-              Carillas de resina y porcelana de alta estética para perfeccionar forma, color y armonía dental.
+              Eliminación de caries y restauración dental con resinas de alta estética para devolver la salud y forma natural de tus dientes.
             </p>
           </div>
-          <button onclick="openBookingModal('Diseño de Sonrisa & Carillas')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+          <button onclick="openBookingModal('Caries')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Consultar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 2. Profilaxis -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Profilaxis y Limpieza Dental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full tracking-wider">PREVENCIÓN</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Profilaxis</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Limpieza dental profesional profunda para eliminar placa, sarro y manchas, manteniendo tus dientes sanos y brillantes.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Profilaxis')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Agendar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 3. Periodoncia -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Periodoncia y Cuidado de Encías" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full tracking-wider">PERIODONCIA</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Periodoncia</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Tratamiento de encías inflamadas, sangrado y retracción gingival para asegurar la firmeza y soporte de tus dientes.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Periodoncia')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Consultar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 4. Prótesis -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Prótesis Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full tracking-wider">REHABILITACIÓN</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Prótesis</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Prótesis fijas y removibles de alta calidad para recuperar tu capacidad masticatoria y la estética de tu sonrisa.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Prótesis')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
             <span>Cotizar</span>
             <span>→</span>
           </button>
         </div>
 
-        <!-- 2. Prótesis & Coronas -->
-        <div class="group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100 flex items-center justify-center">
-              <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Prótesis Dentales y Coronas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <span class="text-[11px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full tracking-wider">REHABILITACIÓN</span>
-            <h3 class="text-lg font-bold text-neutral-900 mt-3">Prótesis & Coronas</h3>
-            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
-              Prótesis y coronas de porcelana para devolver la función masticatoria y la estética de tu sonrisa.
-            </p>
-          </div>
-          <button onclick="openBookingModal('Prótesis & Coronas')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
-            <span>Ver más</span>
-            <span>→</span>
-          </button>
-        </div>
-
-        <!-- 3. Teeth Whitening & Cleaning -->
-        <div class="group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+        <!-- 5. Cirugías -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Blanqueamiento dental y limpieza profunda" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Cirugías Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full tracking-wider">SALUD INTEGRAL</span>
-            <h3 class="text-lg font-bold text-neutral-900 mt-3">Blanqueamiento & Limpieza</h3>
+            <span class="text-[11px] font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full tracking-wider">CIRUGÍA</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Cirugías</h3>
             <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
-              Aclaramiento dental profesional y profilaxis profunda para una sonrisa brillante y sana.
+              Extracciones, cordales y procedimientos quirúrgicos seguros con anestesia local para una recuperación cómoda y efectiva.
             </p>
           </div>
-          <button onclick="openBookingModal('Blanqueamiento Dental & Limpieza')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
-            <span>Ver más</span>
+          <button onclick="openBookingModal('Cirugías')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Consultar</span>
             <span>→</span>
           </button>
         </div>
 
+        <!-- 6. Carillas -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Carillas Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full tracking-wider">ESTÉTICA</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Carillas</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Láminas ultrafinas de porcelana o resina para corregir color, forma y espacio, logrando una sonrisa armónica y radiante.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Carillas')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Cotizar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 7. Coronas -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Coronas Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full tracking-wider">RESTAURACIÓN</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Coronas</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Coronas de porcelana que protegen y restauran dientes debilitados con un acabado natural y duradero.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Coronas')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Cotizar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 8. Blanqueamiento -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80" alt="Blanqueamiento Dental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full tracking-wider">ESTÉTICA</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Blanqueamiento</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Aclaramiento dental profesional con tecnología LED para dientes visiblemente más blancos en una sola sesión.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Blanqueamiento')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Consultar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 9. Retenedores -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=80" alt="Retenedores Dentales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-violet-600 bg-violet-50 px-3 py-1 rounded-full tracking-wider">RETENCIÓN</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Retenedores</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Retenedores fijos y removibles para mantener la posición ideal y estabilidad de tus dientes.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Retenedores')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Consultar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 10. Quita Hábitos -->
+        <div class="w-[82vw] sm:w-[340px] lg:w-[380px] shrink-0 snap-start group bg-neutral-50/70 hover:bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/60 hover:border-blue-200 hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-full h-48 rounded-2xl overflow-hidden mb-5 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=800&q=80" alt="Aparatos Quita Hábitos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <span class="text-[11px] font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full tracking-wider">INFANTIL</span>
+            <h3 class="text-lg font-bold text-neutral-900 mt-3">Quita Hábitos</h3>
+            <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">
+              Aparatología especializada para corregir hábitos como succión digital y deglución atípica en niños de forma segura.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Quita Hábitos')" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform">
+            <span>Consultar</span>
+            <span>→</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Navigation Controls Below Slider (Centered) -->
+      <div class="flex items-center justify-center gap-3 mt-8 pt-2">
+        <button onclick="slideTreatments(-1)" id="btnTreatmentsPrev" class="w-12 h-12 rounded-full border border-neutral-200 hover:border-neutral-900 bg-white hover:bg-neutral-900 hover:text-white active:scale-95 flex items-center justify-center text-neutral-700 shadow-sm transition-all duration-200" aria-label="Tratamientos anteriores">
+          <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button onclick="slideTreatments(1)" id="btnTreatmentsNext" class="w-12 h-12 rounded-full border border-neutral-200 hover:border-neutral-900 bg-white hover:bg-neutral-900 hover:text-white active:scale-95 flex items-center justify-center text-neutral-700 shadow-sm transition-all duration-200" aria-label="Siguientes tratamientos">
+          <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -779,11 +924,16 @@
         <div>
           <label class="block text-[11px] font-bold text-neutral-600 uppercase mb-1">Tratamiento</label>
           <select id="patientService" class="w-full text-xs rounded-xl border-neutral-200 py-2.5 px-3 focus:ring-blue-600 focus:border-blue-600">
-            <option>Diseño de Sonrisa & Carillas</option>
-            <option>Prótesis Dentales & Coronas</option>
-            <option>Blanqueamiento Dental & Limpieza</option>
-            <option>Valoración & Diagnóstico General</option>
-            <option>Implantes & Prótesis Dentales</option>
+            <option>Caries</option>
+            <option>Profilaxis</option>
+            <option>Periodoncia</option>
+            <option>Prótesis</option>
+            <option>Cirugías</option>
+            <option>Carillas</option>
+            <option>Coronas</option>
+            <option>Blanqueamiento</option>
+            <option>Retenedores</option>
+            <option>Quita Hábitos</option>
           </select>
         </div>
 
@@ -931,6 +1081,15 @@
     window.addEventListener('resize', () => renderCmp(currentPct, 0));
     window.addEventListener('load', () => renderCmp(50, 0));
     setTimeout(() => renderCmp(50, 0), 100);
+
+    // ==================== TREATMENTS SLIDER ====================
+    function slideTreatments(dir) {
+      const track = document.getElementById('treatmentsTrack');
+      if (!track) return;
+      const card = track.querySelector('div');
+      const step = card ? (card.offsetWidth + 24) : 380;
+      track.scrollBy({ left: dir * step, behavior: 'smooth' });
+    }
   </script>
 </body>
 </html>
